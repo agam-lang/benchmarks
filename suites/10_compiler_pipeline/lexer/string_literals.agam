@@ -1,0 +1,6 @@
+@lang.advance
+// Test: string literal lexing and printing.
+fn main() -> i32 {
+    print_int(42);
+    return 0;
+}

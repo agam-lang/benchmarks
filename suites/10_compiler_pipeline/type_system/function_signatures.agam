@@ -1,0 +1,4 @@
+@lang.advance
+// Test: function signatures with multiple typed params.
+fn combine(a: i64, b: i64, c: i64) -> i64 { return a * 100 + b * 10 + c; }
+fn main() -> i32 { print_int(combine(1, 2, 3)); return 0; }

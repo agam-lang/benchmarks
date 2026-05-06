@@ -1,0 +1,17 @@
+@lang.advance
+// Test: nested function calls, loops inside branches.
+fn inner(x: i64) -> i64 { return x * 2 + 1; }
+fn main() -> i32 {
+    let total: i64 = 0;
+    let i: i64 = 0;
+    while i < 5 {
+        let j: i64 = 0;
+        while j < 3 {
+            if inner(i) > inner(j) { total = total + 1; }
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    print_int(total);
+    return 0;
+}

@@ -1,0 +1,54 @@
+{
+  "environments": {
+    "local_windows_win11": {
+      "name": "Local Windows 11",
+      "os": "windows",
+      "agam_driver": ["agamc"],
+      "c_compiler": "clang",
+      "cpp_compiler": "clang++",
+      "rust_compiler": "rustc",
+      "go_compiler": "go",
+      "cpython": "python"
+    },
+    "local_linux_native": {
+      "name": "Local Linux (native)",
+      "os": "linux",
+      "agam_driver": ["agamc"],
+      "c_compiler": "clang",
+      "cpp_compiler": "clang++",
+      "rust_compiler": "rustc",
+      "go_compiler": "go",
+      "cpython": "python3"
+    },
+    "wsl_ubuntu_24_04": {
+      "name": "WSL Ubuntu 24.04",
+      "os": "linux",
+      "agam_driver": ["agamc"],
+      "c_compiler": "clang",
+      "cpp_compiler": "clang++",
+      "rust_compiler": "rustc",
+      "go_compiler": "go",
+      "cpython": "python3"
+    },
+    "github_actions_linux": {
+      "name": "GitHub Actions Linux",
+      "os": "linux",
+      "agam_driver": ["agamc"],
+      "c_compiler": "clang",
+      "cpp_compiler": "clang++",
+      "rust_compiler": "rustc",
+      "go_compiler": "go",
+      "cpython": "python3"
+    },
+    "github_actions_windows": {
+      "name": "GitHub Actions Windows",
+      "os": "windows",
+      "agam_driver": ["agamc"],
+      "c_compiler": "clang",
+      "cpp_compiler": "clang++",
+      "rust_compiler": "rustc",
+      "go_compiler": "go",
+      "cpython": "python"
+    }
+  }
+}

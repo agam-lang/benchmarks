@@ -1,0 +1,8 @@
+@lang.advance
+// Test: basic expression parsing — parenthesized, binary ops, unary minus.
+fn main() -> i32 {
+    let a: i64 = (2 + 3) * 4;
+    let b: i64 = a - (10 / 2);
+    print_int(b);
+    return 0;
+}

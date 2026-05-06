@@ -8,6 +8,19 @@ node_modules/
 *.so
 *.dylib
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Results (raw runs are machine-specific)
+results/raw/
+results/aggregated/
+results/reports/
+results/plots/
+
 # IDE
 .idea/
 .vscode/

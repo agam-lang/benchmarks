@@ -1,0 +1,13 @@
+@lang.advance
+// Test: variable scoping — inner block vars don't leak.
+fn main() -> i32 {
+    let x: i64 = 10;
+    let i: i64 = 0;
+    while i < 3 {
+        let y: i64 = x + i;
+        x = y;
+        i = i + 1;
+    }
+    print_int(x);
+    return 0;
+}

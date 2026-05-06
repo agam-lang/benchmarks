@@ -1,0 +1,18 @@
+[project]
+name = "agam-benchmarks"
+version = "0.1.0"
+description = "Cross-language benchmark suite for the Agam programming language"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT OR Apache-2.0"}
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
+plot = ["matplotlib>=3.8"]
+numpy = ["numpy>=1.26"]
+gpu = ["torch>=2.2", "cupy-cuda12x>=13.0", "numba>=0.59", "tensorflow>=2.16"]
+dev = ["pytest>=8.0"]
+all = ["pyyaml>=6.0", "matplotlib>=3.8", "numpy>=1.26", "torch>=2.2", "cupy-cuda12x>=13.0", "numba>=0.59", "tensorflow>=2.16", "pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

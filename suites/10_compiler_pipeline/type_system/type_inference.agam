@@ -1,0 +1,4 @@
+@lang.advance
+// Test: let bindings infer type from RHS correctly.
+fn get_value() -> i64 { return 42; }
+fn main() -> i32 { let x: i64 = get_value(); print_int(x); return 0; }

@@ -1,0 +1,9 @@
+@lang.advance
+// Test: arithmetic operators produce correct results.
+fn main() -> i32 {
+    let a: i64 = 15 + 27;
+    let b: i64 = 100 - 58;
+    let c: i64 = a * b;
+    print_int(c);
+    return 0;
+}

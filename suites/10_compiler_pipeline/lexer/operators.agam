@@ -1,0 +1,11 @@
+@lang.advance
+// Test: arithmetic, comparison, and assignment operators.
+fn main() -> i32 {
+    let a: i64 = 10 + 5;
+    let b: i64 = a - 3;
+    let c: i64 = b * 2;
+    let d: i64 = c / 4;
+    let e: i64 = d % 3;
+    print_int(e);
+    return 0;
+}

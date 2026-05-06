@@ -1,0 +1,11 @@
+@lang.advance
+// Test: early return from function and loop.
+fn find_first_divisible(limit: i64, divisor: i64) -> i64 {
+    let n: i64 = 1;
+    while n <= limit {
+        if n % divisor == 0 { return n; }
+        n = n + 1;
+    }
+    return -1;
+}
+fn main() -> i32 { print_int(find_first_divisible(100, 7)); return 0; }

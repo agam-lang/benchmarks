@@ -1,0 +1,15 @@
+@lang.advance
+// Test: variable shadowing in nested scopes.
+fn main() -> i32 {
+    let x: i64 = 5;
+    let result: i64 = x;
+    let i: i64 = 0;
+    while i < 1 {
+        let x: i64 = 100;
+        result = result + x;
+        i = i + 1;
+    }
+    result = result + x;
+    print_int(result);
+    return 0;
+}

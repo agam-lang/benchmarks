@@ -3,8 +3,17 @@
 ## Active Workstreams
 
 1. **Phase 1: Algorithm Suite**
-   - Status: planned
+   - Status: in-progress
    - Goal: Fibonacci, sorting, graph algorithms across all target languages
+   - Progress:
+     - ✅ Project foundation (pyproject.toml, .gitignore, config)
+     - ✅ Infrastructure layer (utils, statistical analysis, benchmark runner)
+     - ✅ Harness layer (base, agam, c, cpp, rust, go, python)
+     - ✅ 5 Agam algorithm benchmark sources
+     - ✅ 25 cross-language comparison sources (C, C++, Rust, Go, Python)
+     - ✅ Test suite (workspace shape, discovery, cross-language coverage, config, harness, stats)
+     - ✅ CI workflow (GitHub Actions pytest on 3.11/3.12)
+     - ⬜ First measured same-host benchmark results
 
 2. **Phase 2: Numerical Suite**
    - Status: planned

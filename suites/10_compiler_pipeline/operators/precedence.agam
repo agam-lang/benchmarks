@@ -1,0 +1,8 @@
+@lang.advance
+// Test: operator precedence (multiply before add).
+fn main() -> i32 {
+    let a: i64 = 2 + 3 * 4;
+    let b: i64 = (2 + 3) * 4;
+    print_int(a * 1000 + b);
+    return 0;
+}

@@ -1,0 +1,3 @@
+@lang.advance
+// Test: verify program compiles and runs via C backend.
+fn main() -> i32 { print_int(77); return 0; }

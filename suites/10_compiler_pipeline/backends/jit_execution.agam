@@ -1,0 +1,3 @@
+@lang.advance
+// Test: verify program runs in JIT mode.
+fn main() -> i32 { print_int(55); return 0; }

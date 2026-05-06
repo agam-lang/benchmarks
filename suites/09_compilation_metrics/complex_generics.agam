@@ -1,0 +1,18 @@
+@lang.advance
+fn apply_twice(x: i64, step: i64) -> i64 {
+    return ((x * step) + 7) % 104729;
+}
+fn chain(x: i64, depth: i64) -> i64 {
+    if depth == 0 { return x; }
+    return chain(apply_twice(x, depth), depth - 1);
+}
+fn main() -> i32 {
+    let total: i64 = 0;
+    let i: i64 = 0;
+    while i < 500 {
+        total = total + chain(i, 20);
+        i = i + 1;
+    }
+    print_int(total);
+    return 0;
+}

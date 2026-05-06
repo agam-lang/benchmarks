@@ -1,0 +1,10 @@
+@lang.advance
+// Test: mutable variable reassignment.
+fn main() -> i32 {
+    let x: i64 = 1;
+    x = x + 10;
+    x = x * 2;
+    x = x - 3;
+    print_int(x);
+    return 0;
+}

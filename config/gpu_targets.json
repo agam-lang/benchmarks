@@ -1,0 +1,70 @@
+{
+  "_comment": "GPU/ML framework benchmark targets for Suite 06.",
+  "targets": {
+    "pytorch_cuda": {
+      "name": "PyTorch CUDA",
+      "framework": "pytorch",
+      "device": "cuda",
+      "language": "python",
+      "requires_gpu": true
+    },
+    "pytorch_cpu": {
+      "name": "PyTorch CPU",
+      "framework": "pytorch",
+      "device": "cpu",
+      "language": "python",
+      "requires_gpu": false
+    },
+    "cupy_gpu": {
+      "name": "CuPy GPU",
+      "framework": "cupy",
+      "device": "cuda",
+      "language": "python",
+      "requires_gpu": true
+    },
+    "numba_cuda": {
+      "name": "Numba CUDA JIT",
+      "framework": "numba",
+      "device": "cuda",
+      "language": "python",
+      "requires_gpu": true
+    },
+    "tensorflow_gpu": {
+      "name": "TensorFlow GPU",
+      "framework": "tensorflow",
+      "device": "gpu",
+      "language": "python",
+      "requires_gpu": true
+    },
+    "tensorflow_cpu": {
+      "name": "TensorFlow CPU",
+      "framework": "tensorflow",
+      "device": "cpu",
+      "language": "python",
+      "requires_gpu": false
+    },
+    "numpy_cpu": {
+      "name": "NumPy CPU (BLAS)",
+      "framework": "numpy",
+      "device": "cpu",
+      "language": "python",
+      "requires_gpu": false
+    },
+    "python_native": {
+      "name": "Pure Python",
+      "framework": "none",
+      "device": "cpu",
+      "language": "python",
+      "requires_gpu": false
+    }
+  },
+  "gpu_defaults": {
+    "warmup_runs": 3,
+    "measured_runs": 7,
+    "matrix_sizes": [256, 512, 1024, 2048],
+    "vector_sizes": [1000000, 10000000, 100000000],
+    "conv2d_sizes": [256, 512, 1024],
+    "softmax_width": 4096,
+    "softmax_rounds": 4000
+  }
+}

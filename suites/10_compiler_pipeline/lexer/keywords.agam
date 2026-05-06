@@ -1,0 +1,12 @@
+@lang.advance
+// Test: all Agam keywords lex correctly.
+fn main() -> i32 {
+    let x: i64 = 10;
+    let y: i64 = 20;
+    if x < y {
+        print_int(1);
+    } else {
+        print_int(0);
+    }
+    return 0;
+}

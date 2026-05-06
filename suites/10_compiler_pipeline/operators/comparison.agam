@@ -1,0 +1,14 @@
+@lang.advance
+// Test: comparison operators.
+fn bool_to_int(cond: i64) -> i64 { return cond; }
+fn main() -> i32 {
+    let total: i64 = 0;
+    if 5 < 10 { total = total + 1; }
+    if 10 > 5 { total = total + 1; }
+    if 5 <= 5 { total = total + 1; }
+    if 7 >= 7 { total = total + 1; }
+    if 3 == 3 { total = total + 1; }
+    if 3 != 4 { total = total + 1; }
+    print_int(total);
+    return 0;
+}

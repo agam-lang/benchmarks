@@ -1,0 +1,9 @@
+@lang.advance
+// Test: integer literal parsing (decimal).
+fn main() -> i32 {
+    let small: i64 = 42;
+    let medium: i64 = 100000;
+    let large: i64 = 2147483647;
+    print_int(small + medium + large);
+    return 0;
+}
