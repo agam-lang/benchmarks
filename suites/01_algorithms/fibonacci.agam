@@ -1,10 +1,16 @@
 @lang.advance
 
+fn i64_const(value: i64) -> i64 {
+    return value;
+}
+
 fn fib(n: i64) -> i64 {
-    if n < 2 {
+    let one: i64 = i64_const(1);
+    let two: i64 = i64_const(2);
+    if n < two {
         return n;
     }
-    return fib(n - 1) + fib(n - 2);
+    return fib(n - one) + fib(n - two);
 }
 
 fn arg_or(index: i32, fallback: i64) -> i64 {
@@ -15,7 +21,7 @@ fn arg_or(index: i32, fallback: i64) -> i64 {
 }
 
 fn main() -> i32 {
-    let n: i64 = arg_or(1, 32);
+    let n: i64 = arg_or(1, i64_const(32));
     print_int(fib(n));
     return 0;
 }

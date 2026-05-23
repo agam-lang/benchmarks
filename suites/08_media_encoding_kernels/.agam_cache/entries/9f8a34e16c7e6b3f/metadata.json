@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "9f8a34e16c7e6b3f",
+  "key": {
+    "source_hash": "595df95a7b468dd3",
+    "semantic_hash": "c776bc949962722a",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\08_media_encoding_kernels\\pixel_filter.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 24253,
+  "created_unix_ms": 1778759988302,
+  "last_used_unix_ms": 1778767885493
+}

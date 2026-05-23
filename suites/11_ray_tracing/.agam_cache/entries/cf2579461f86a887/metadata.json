@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "cf2579461f86a887",
+  "key": {
+    "source_hash": "4f551f272731ecbc",
+    "semantic_hash": "7cb8c0c01f276855",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\11_ray_tracing\\bvh_traversal.agam",
+  "artifact_name": "bvh_traversal.jit_profile.json",
+  "bytes": 2706,
+  "created_unix_ms": 1778768195123,
+  "last_used_unix_ms": 1778768195123
+}

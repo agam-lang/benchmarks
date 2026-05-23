@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "e8055737f9d960af",
+  "key": {
+    "source_hash": "9415ecfc8e2349ca",
+    "semantic_hash": "56e0540173884ff1",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\08_media_encoding_kernels\\audio_lpc.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 22472,
+  "created_unix_ms": 1778759923175,
+  "last_used_unix_ms": 1778767341658
+}

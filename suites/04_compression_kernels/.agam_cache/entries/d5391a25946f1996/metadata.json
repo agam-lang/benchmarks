@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "d5391a25946f1996",
+  "key": {
+    "source_hash": "519383d78166892f",
+    "semantic_hash": "317f6ad08c36c54f",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\04_compression_kernels\\block_sort.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 18212,
+  "created_unix_ms": 1778759848658,
+  "last_used_unix_ms": 1778767133305
+}

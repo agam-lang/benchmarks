@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "231bf65136e4f031",
+  "key": {
+    "source_hash": "1ea880fe35a1c790",
+    "semantic_hash": "4197ff88c6baa560",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=C:\\Program Files\\LLVM\\bin\\clang.exe;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\13_simd_vectorization\\image_blur.agam",
+  "artifact_name": "agam_llvm_o3_call_cache_off.exe",
+  "bytes": 160256,
+  "created_unix_ms": 1778758715325,
+  "last_used_unix_ms": 1778768670062
+}

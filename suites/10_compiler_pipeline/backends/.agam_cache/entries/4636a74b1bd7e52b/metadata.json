@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "4636a74b1bd7e52b",
+  "key": {
+    "source_hash": "1a2f565855c7a030",
+    "semantic_hash": "5e526561842312c6",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\10_compiler_pipeline\\backends\\c_output_verify.agam",
+  "artifact_name": "c_output_verify.jit_profile.json",
+  "bytes": 642,
+  "created_unix_ms": 1778767949715,
+  "last_used_unix_ms": 1778767949715
+}

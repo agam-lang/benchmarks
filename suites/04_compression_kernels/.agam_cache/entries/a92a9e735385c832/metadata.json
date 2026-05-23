@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "a92a9e735385c832",
+  "key": {
+    "source_hash": "c4b9bde0a8d3fa5c",
+    "semantic_hash": "9e60aff60a50b201",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\04_compression_kernels\\rle_codec.agam",
+  "artifact_name": "agam_c_o3_call_cache_on.c",
+  "bytes": 19486,
+  "created_unix_ms": 1778759865512,
+  "last_used_unix_ms": 1778767181809
+}

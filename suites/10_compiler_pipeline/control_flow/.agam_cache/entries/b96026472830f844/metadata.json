@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "b96026472830f844",
+  "key": {
+    "source_hash": "297d21f9014aa97f",
+    "semantic_hash": "791fd2c9e743e276",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\10_compiler_pipeline\\control_flow\\early_return.agam",
+  "artifact_name": "agam_c_o3_call_cache_on.c",
+  "bytes": 15100,
+  "created_unix_ms": 1778760042765,
+  "last_used_unix_ms": 1778767968445
+}

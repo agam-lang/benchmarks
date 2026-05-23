@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "b7cc5a5a4594189c",
+  "key": {
+    "source_hash": "5fd6e0388e81d514",
+    "semantic_hash": "12899afa07be89af",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=C:\\Program Files\\LLVM\\bin\\clang.exe;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\quicksort.agam",
+  "artifact_name": "agam_llvm_o3_call_cache_off.exe",
+  "bytes": 162304,
+  "created_unix_ms": 1778757132727,
+  "last_used_unix_ms": 1778766933270
+}

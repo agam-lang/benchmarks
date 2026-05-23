@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "0bacfdaba866bf61",
+  "key": {
+    "source_hash": "d5dff661d9b4bb74",
+    "semantic_hash": "4c3083fecd65ad63",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\10_compiler_pipeline\\parser\\annotations.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 14054,
+  "created_unix_ms": 1778760153384,
+  "last_used_unix_ms": 1778768121153
+}

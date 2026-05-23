@@ -71,15 +71,43 @@
       "name": "Clang C O3",
       "language": "c",
       "compiler": "clang",
-      "compiler_key": "c_compiler",
+      "compiler_key": "clang_c_compiler",
       "compile_args": ["-O3"]
     },
     "cpp_clangxx_o3": {
       "name": "Clang++ O3",
       "language": "cpp",
       "compiler": "clang++",
-      "compiler_key": "cpp_compiler",
+      "compiler_key": "clang_cpp_compiler",
       "compile_args": ["-O3", "-std=c++20"]
+    },
+    "c_gcc_16_o3": {
+      "name": "GCC 16 C O3",
+      "language": "c",
+      "compiler": "gcc",
+      "compiler_key": "gcc_c_compiler",
+      "compile_args": ["-O3", "-march=native", "-fno-math-errno", "-fno-trapping-math"]
+    },
+    "cpp_gcc_16_o3": {
+      "name": "GCC 16 C++ O3",
+      "language": "cpp",
+      "compiler": "g++",
+      "compiler_key": "gcc_cpp_compiler",
+      "compile_args": ["-O3", "-march=native", "-std=c++20", "-fno-math-errno", "-fno-trapping-math"]
+    },
+    "c_clang_22_o3": {
+      "name": "Clang 22 C O3",
+      "language": "c",
+      "compiler": "clang",
+      "compiler_key": "clang22_c_compiler",
+      "compile_args": ["-O3", "-march=native", "-ffast-math"]
+    },
+    "cpp_clang_22_o3": {
+      "name": "Clang 22 C++ O3",
+      "language": "cpp",
+      "compiler": "clang++",
+      "compiler_key": "clang22_cpp_compiler",
+      "compile_args": ["-O3", "-march=native", "-std=c++20", "-ffast-math"]
     },
     "go_release": {
       "name": "Go release",

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "dc0c262b3790888e",
+  "key": {
+    "source_hash": "145cc7b184a483e4",
+    "semantic_hash": "b7a8bb3382ede13d",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=C:\\Program Files\\LLVM\\bin\\clang.exe;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\13_simd_vectorization\\matrix_multiply.agam",
+  "artifact_name": "agam_llvm_o3_call_cache_on.exe",
+  "bytes": 160256,
+  "created_unix_ms": 1778760292738,
+  "last_used_unix_ms": 1778768687562
+}

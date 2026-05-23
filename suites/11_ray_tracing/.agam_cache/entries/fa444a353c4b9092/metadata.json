@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "fa444a353c4b9092",
+  "key": {
+    "source_hash": "ab9d053ee8cf618d",
+    "semantic_hash": "a376b2a012dfed6f",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\11_ray_tracing\\zbuffer_rasterize.agam",
+  "artifact_name": "agam_c_o3_call_cache_on.c",
+  "bytes": 26981,
+  "created_unix_ms": 1778760221095,
+  "last_used_unix_ms": 1778768281787
+}

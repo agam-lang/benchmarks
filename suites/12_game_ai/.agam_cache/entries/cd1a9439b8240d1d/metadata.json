@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "cd1a9439b8240d1d",
+  "key": {
+    "source_hash": "758c6bb74e8ab1b2",
+    "semantic_hash": "66dff0c6237245ac",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\12_game_ai\\minimax_search.agam",
+  "artifact_name": "agam_c_o3_call_cache_on.c",
+  "bytes": 24277,
+  "created_unix_ms": 1778760521831,
+  "last_used_unix_ms": 1778768599257
+}

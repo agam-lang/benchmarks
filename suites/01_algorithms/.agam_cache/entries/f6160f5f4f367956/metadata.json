@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "f6160f5f4f367956",
+  "key": {
+    "source_hash": "56ab20c722c13681",
+    "semantic_hash": "44d14565b04cd722",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\edit_distance.agam",
+  "artifact_name": "edit_distance.jit_profile.json",
+  "bytes": 1155,
+  "created_unix_ms": 1778766908981,
+  "last_used_unix_ms": 1778766908981
+}

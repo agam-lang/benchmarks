@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "1d777279e8a428ee",
+  "key": {
+    "source_hash": "a04e2dbefae5f957",
+    "semantic_hash": "4230fe0b0843bf46",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\10_compiler_pipeline\\lexer\\string_literals.agam",
+  "artifact_name": "string_literals.jit_profile.json",
+  "bytes": 642,
+  "created_unix_ms": 1778768065513,
+  "last_used_unix_ms": 1778768065513
+}

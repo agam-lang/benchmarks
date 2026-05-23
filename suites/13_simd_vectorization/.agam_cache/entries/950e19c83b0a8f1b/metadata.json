@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "950e19c83b0a8f1b",
+  "key": {
+    "source_hash": "1ea880fe35a1c790",
+    "semantic_hash": "4197ff88c6baa560",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\13_simd_vectorization\\image_blur.agam",
+  "artifact_name": "agam_c_o3_call_cache_on.c",
+  "bytes": 21588,
+  "created_unix_ms": 1778760284211,
+  "last_used_unix_ms": 1778768672738
+}

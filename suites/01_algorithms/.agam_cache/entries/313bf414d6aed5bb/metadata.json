@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "313bf414d6aed5bb",
+  "key": {
+    "source_hash": "5fd6e0388e81d514",
+    "semantic_hash": "12899afa07be89af",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\quicksort.agam",
+  "artifact_name": "quicksort.jit_profile.json",
+  "bytes": 1673,
+  "created_unix_ms": 1778766944032,
+  "last_used_unix_ms": 1778766944032
+}

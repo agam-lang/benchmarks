@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "10764a0b15cc12f7",
+  "key": {
+    "source_hash": "9f9ce17009e60400",
+    "semantic_hash": "6900126f4e8ddc48",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\10_compiler_pipeline\\control_flow\\while_loops.agam",
+  "artifact_name": "while_loops.jit_profile.json",
+  "bytes": 642,
+  "created_unix_ms": 1778767994894,
+  "last_used_unix_ms": 1778767994894
+}

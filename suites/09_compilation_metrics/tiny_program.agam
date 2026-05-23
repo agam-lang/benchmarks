@@ -1,2 +1,5 @@
 @lang.advance
-fn main() -> i32 { print_int(42); return 0; }
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn main() -> i32 { print_int(i64_const(42)); return 0; }

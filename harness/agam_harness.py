@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import os
-import shutil
 from pathlib import Path
 from typing import Any
 
 from harness.base_harness import BaseHarness, PreparedBenchmark
+from infrastructure.utils import resolve_agam_driver, resolve_command_path
 
 
 class AgamHarness(BaseHarness):
@@ -35,22 +35,90 @@ class AgamHarness(BaseHarness):
         artifact_path: Path | None
 
         if build_then_run:
-            compile_command = [
-                *driver,
-                "build",
-                str(source),
-                "--backend",
-                backend,
-                "-O",
-                str(opt_level),
-                "--output",
-                str(binary),
-            ]
-            if call_cache_enabled:
-                compile_command.append("--call-cache")
-            run_command = [str(binary)]
-            artifact_path = binary
-            runtime_executable = binary
+            if backend == "c":
+                generated_c = build_target.with_suffix(".c")
+                c_compiler_name = self.environment.get("clang_c_compiler", "clang")
+                c_compiler_path = resolve_command_path(c_compiler_name)
+                c_compiler = str(c_compiler_path) if c_compiler_path else c_compiler_name
+
+                raw_agam_build_command = [
+                    *driver,
+                    "build",
+                    str(source),
+                    "--backend",
+                    backend,
+                    "-O",
+                    str(opt_level),
+                    "--output",
+                    str(generated_c),
+                ]
+                if call_cache_enabled:
+                    raw_agam_build_command.append("--call-cache")
+
+                if os.name == "nt":
+                    quoted_args = " ".join([f"'{part}'" for part in raw_agam_build_command])
+                    output_path = str(generated_c).replace("'", "''")
+                    agam_build_command = [
+                        "pwsh",
+                        "-NoLogo",
+                        "-NoProfile",
+                        "-Command",
+                        (
+                            f"& {quoted_args}; "
+                            f"if (Test-Path '{output_path}') {{ exit 0 }} "
+                            f"else {{ exit $LASTEXITCODE }}"
+                        ),
+                    ]
+                else:
+                    agam_build_command = raw_agam_build_command
+
+                native_build_command = [
+                    c_compiler,
+                ]
+                if os.name == "nt":
+                    native_build_command.extend(
+                        [
+                            "-include",
+                            "sys/stat.h",
+                            "-include",
+                            "direct.h",
+                            "-D_CRT_SECURE_NO_WARNINGS",
+                            "-DS_ISREG(m)=(((m)&_S_IFMT)==_S_IFREG)",
+                            "-DS_ISDIR(m)=(((m)&_S_IFMT)==_S_IFDIR)",
+                        ]
+                    )
+                native_build_command.extend(
+                    [
+                        str(generated_c),
+                        "-O3",
+                        "-o",
+                        str(binary),
+                    ]
+                )
+                if os.name != "nt":
+                    native_build_command.append("-lm")
+
+                compile_command = [agam_build_command, native_build_command]
+                run_command = [str(binary)]
+                artifact_path = binary
+                runtime_executable = binary
+            else:
+                compile_command = [
+                    *driver,
+                    "build",
+                    str(source),
+                    "--backend",
+                    backend,
+                    "-O",
+                    str(opt_level),
+                    "--output",
+                    str(binary),
+                ]
+                if call_cache_enabled:
+                    compile_command.append("--call-cache")
+                run_command = [str(binary)]
+                artifact_path = binary
+                runtime_executable = binary
         else:
             compile_command = None
             run_command = [
@@ -65,15 +133,14 @@ class AgamHarness(BaseHarness):
             if call_cache_enabled:
                 run_command.append("--call-cache")
             artifact_path = None
-            resolved = shutil.which(str(driver[0]))
-            runtime_executable = Path(resolved) if resolved else None
+            runtime_executable = resolve_command_path(str(driver[0]))
 
         return PreparedBenchmark(
             target_id=target_id,
             target_name=str(target_spec.get("name", target_id)),
             language=self.language,
             backend=backend,
-            compiler=str(target_spec.get("compiler", "agamc")),
+            compiler=self._compiler_label(driver[0], backend),
             call_cache_enabled=call_cache_enabled,
             compile_command=compile_command,
             run_command=run_command,
@@ -85,7 +152,16 @@ class AgamHarness(BaseHarness):
     def _resolve_driver(self) -> list[str]:
         """Resolve the agamc driver command."""
         configured = self.environment.get("agam_driver", ["agamc"])
-        resolved = shutil.which(configured[0])
+        resolved = resolve_agam_driver(str(configured[0]))
         if resolved:
-            return [resolved]
+            return [str(resolved), *configured[1:]]
         return configured
+
+    def _compiler_label(self, driver: str, backend: str) -> str:
+        """Return a readable compiler label for result rows."""
+        if backend != "c":
+            return str(driver)
+        c_compiler_name = self.environment.get("clang_c_compiler", "clang")
+        c_compiler_path = resolve_command_path(c_compiler_name)
+        c_compiler = str(c_compiler_path) if c_compiler_path else c_compiler_name
+        return f"{driver} + {c_compiler}"

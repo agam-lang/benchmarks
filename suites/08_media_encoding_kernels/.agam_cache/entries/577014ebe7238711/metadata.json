@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "577014ebe7238711",
+  "key": {
+    "source_hash": "595df95a7b468dd3",
+    "semantic_hash": "c776bc949962722a",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\08_media_encoding_kernels\\pixel_filter.agam",
+  "artifact_name": "pixel_filter.jit_profile.json",
+  "bytes": 1668,
+  "created_unix_ms": 1778767900218,
+  "last_used_unix_ms": 1778767900218
+}

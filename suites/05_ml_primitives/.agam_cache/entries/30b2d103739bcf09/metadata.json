@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "30b2d103739bcf09",
+  "key": {
+    "source_hash": "ca3d1a32df7757e6",
+    "semantic_hash": "d879a0aa587be6e3",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\05_ml_primitives\\convolution.agam",
+  "artifact_name": "convolution.jit_profile.json",
+  "bytes": 1147,
+  "created_unix_ms": 1778767240005,
+  "last_used_unix_ms": 1778767240005
+}

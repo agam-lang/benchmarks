@@ -17,10 +17,11 @@ class PreparedBenchmark:
     backend: str | None
     compiler: str | None
     call_cache_enabled: bool
-    compile_command: list[str] | None
+    compile_command: list[str] | list[list[str]] | None
     run_command: list[str]
     artifact_path: Path | None = None
     runtime_executable: Path | None = None
+    skip_reason: str | None = None
     metadata: dict[str, Any] = field(default_factory=dict)
 
 

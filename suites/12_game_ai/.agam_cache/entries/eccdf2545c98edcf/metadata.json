@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "eccdf2545c98edcf",
+  "key": {
+    "source_hash": "20798bc3e5841ef0",
+    "semantic_hash": "193ff7d69f961561",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\12_game_ai\\astar_pathfinding.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 24321,
+  "created_unix_ms": 1778760226218,
+  "last_used_unix_ms": 1778768293513
+}

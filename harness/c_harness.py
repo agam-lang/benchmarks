@@ -24,7 +24,8 @@ class CHarness(BaseHarness):
         target_spec: dict[str, Any],
     ) -> PreparedBenchmark:
         compiler_key = target_spec.get("compiler_key", "c_compiler")
-        compiler_name = self.environment.get(compiler_key, "clang")
+        default_compiler = str(target_spec.get("compiler", "clang"))
+        compiler_name = self.environment.get(compiler_key, default_compiler)
         compiler_path = resolve_command_path(compiler_name)
         compiler = str(compiler_path) if compiler_path else compiler_name
         compile_args = list(target_spec.get("compile_args", ["-O3"]))
@@ -36,8 +37,9 @@ class CHarness(BaseHarness):
             *compile_args,
             "-o",
             str(binary),
-            "-lm",
         ]
+        if os.name != "nt":
+            compile_command.append("-lm")
 
         return PreparedBenchmark(
             target_id=target_id,

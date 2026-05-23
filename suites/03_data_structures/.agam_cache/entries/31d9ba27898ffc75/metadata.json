@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "31d9ba27898ffc75",
+  "key": {
+    "source_hash": "ab9a1451d6c1b71a",
+    "semantic_hash": "971bebfba0d80fad",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\03_data_structures\\ring_buffer.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 17302,
+  "created_unix_ms": 1778759842856,
+  "last_used_unix_ms": 1778767123751
+}

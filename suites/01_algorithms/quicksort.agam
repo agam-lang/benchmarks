@@ -1,31 +1,42 @@
 @lang.advance
 
+fn i64_const(value: i64) -> i64 {
+    return value;
+}
+
 fn partition_cost(low: i64, high: i64, pivot: i64) -> i64 {
-    let score: i64 = 0;
+    let one: i64 = i64_const(1);
+    let thirteen: i64 = i64_const(13);
+    let seventeen: i64 = i64_const(17);
+    let modulus: i64 = i64_const(997);
+    let score: i64 = i64_const(0);
     let i: i64 = low;
     while i < high {
-        let probe: i64 = ((i * 17) + 13) % 997;
+        let probe: i64 = ((i * seventeen) + thirteen) % modulus;
         if probe < pivot {
             score = score + probe;
         } else {
             score = score - probe;
         }
-        i = i + 1;
+        i = i + one;
     }
     return score;
 }
 
 fn quicksort_cost(low: i64, high: i64) -> i64 {
-    if high - low < 2 {
+    let one: i64 = i64_const(1);
+    let two: i64 = i64_const(2);
+    if high - low < two {
         return high - low;
     }
-    let pivot: i64 = (low + high) / 2;
-    return partition_cost(low, high, pivot)
-        + quicksort_cost(low, pivot)
-        + quicksort_cost(pivot + 1, high);
+    let pivot: i64 = (low + high) / two;
+    let partition: i64 = partition_cost(low, high, pivot);
+    let left: i64 = quicksort_cost(low, pivot);
+    let right: i64 = quicksort_cost(pivot + one, high);
+    return partition + left + right;
 }
 
 fn main() -> i32 {
-    print_int(quicksort_cost(0, 5000));
+    print_int(quicksort_cost(i64_const(0), i64_const(5000)));
     return 0;
 }

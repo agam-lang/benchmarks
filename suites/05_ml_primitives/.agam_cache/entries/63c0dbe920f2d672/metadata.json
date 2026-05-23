@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "63c0dbe920f2d672",
+  "key": {
+    "source_hash": "343f8ba42d8df935",
+    "semantic_hash": "399efe8bd42825f4",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\05_ml_primitives\\autodiff.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 15496,
+  "created_unix_ms": 1778759871934,
+  "last_used_unix_ms": 1778767188544
+}

@@ -1,0 +1,2368 @@
+Running 332 benchmark sources on local_windows_win11...
+
+Workload: 01_algorithms\binary_search.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.445 ms (+/-0.497)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.680 ms (+/-0.298)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.563 ms (+/-0.920)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.886 ms (+/-2.296)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 242.614 ms (+/-17.073)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 227.776 ms (+/-39.915)
+
+Workload: 01_algorithms\comparisons\binary_search.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.121 ms (+/-0.417)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+    [-] Skipping target: missing tool 'gcc'
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.363 ms (+/-0.477)
+
+Workload: 01_algorithms\comparisons\binary_search.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.413 ms (+/-0.709)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+    [-] Skipping target: missing tool 'g++'
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.333 ms (+/-0.342)
+
+Workload: 01_algorithms\comparisons\binary_search.go
+  Target: Go release (go_release)
+    [-] Skipping target: missing tool 'go'
+
+Workload: 01_algorithms\comparisons\binary_search.py
+  Target: CPython (python_cpython)
+    Result: 23.909 ms (+/-0.817)
+
+Workload: 01_algorithms\comparisons\binary_search.rs
+  Target: Rust release (rust_release)
+    Result: 9.939 ms (+/-0.285)
+
+Workload: 01_algorithms\comparisons\edit_distance.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 18.486 ms (+/-1.224)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 20.382 ms (+/-0.642)
+
+Workload: 01_algorithms\comparisons\edit_distance.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 18.010 ms (+/-0.389)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 20.342 ms (+/-1.492)
+
+Workload: 01_algorithms\comparisons\edit_distance.go
+  Target: Go release (go_release)
+
+Workload: 01_algorithms\comparisons\edit_distance.py
+  Target: CPython (python_cpython)
+    Result: 795.052 ms (+/-18.671)
+
+Workload: 01_algorithms\comparisons\edit_distance.rs
+  Target: Rust release (rust_release)
+    Result: 18.311 ms (+/-0.464)
+
+Workload: 01_algorithms\comparisons\fibonacci.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 13.873 ms (+/-0.557)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.949 ms (+/-0.515)
+
+Workload: 01_algorithms\comparisons\fibonacci.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 14.507 ms (+/-0.509)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 13.572 ms (+/-0.518)
+
+Workload: 01_algorithms\comparisons\fibonacci.go
+  Target: Go release (go_release)
+
+Workload: 01_algorithms\comparisons\fibonacci.py
+  Target: CPython (python_cpython)
+    Result: 255.112 ms (+/-10.225)
+
+Workload: 01_algorithms\comparisons\fibonacci.rs
+  Target: Rust release (rust_release)
+    Result: 14.512 ms (+/-1.049)
+
+Workload: 01_algorithms\comparisons\prime_sieve.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.806 ms (+/-0.388)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.603 ms (+/-0.333)
+
+Workload: 01_algorithms\comparisons\prime_sieve.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.191 ms (+/-0.364)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.112 ms (+/-0.361)
+
+Workload: 01_algorithms\comparisons\prime_sieve.go
+  Target: Go release (go_release)
+
+Workload: 01_algorithms\comparisons\prime_sieve.py
+  Target: CPython (python_cpython)
+    Result: 40.962 ms (+/-1.913)
+
+Workload: 01_algorithms\comparisons\prime_sieve.rs
+  Target: Rust release (rust_release)
+    Result: 10.451 ms (+/-0.255)
+
+Workload: 01_algorithms\comparisons\quicksort.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.600 ms (+/-0.894)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.656 ms (+/-0.357)
+
+Workload: 01_algorithms\comparisons\quicksort.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.519 ms (+/-0.467)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.567 ms (+/-0.464)
+
+Workload: 01_algorithms\comparisons\quicksort.go
+  Target: Go release (go_release)
+
+Workload: 01_algorithms\comparisons\quicksort.py
+  Target: CPython (python_cpython)
+    Result: 29.610 ms (+/-1.622)
+
+Workload: 01_algorithms\comparisons\quicksort.rs
+  Target: Rust release (rust_release)
+    Result: 9.888 ms (+/-0.191)
+
+Workload: 01_algorithms\edit_distance.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 19.932 ms (+/-0.929)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 18.997 ms (+/-0.634)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 18.602 ms (+/-1.096)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 18.215 ms (+/-1.893)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 217.757 ms (+/-1.968)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 221.910 ms (+/-12.220)
+
+Workload: 01_algorithms\fibonacci.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.356 ms (+/-1.086)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.602 ms (+/-2.477)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 14.915 ms (+/-1.004)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.932 ms (+/-0.508)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 217.375 ms (+/-8.600)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.792 ms (+/-10.307)
+
+Workload: 01_algorithms\prime_sieve.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 17.405 ms (+/-1.949)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 14.851 ms (+/-0.931)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.748 ms (+/-0.363)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.236 ms (+/-0.429)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 377.132 ms (+/-8.853)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 386.455 ms (+/-8.902)
+
+Workload: 01_algorithms\quicksort.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.891 ms (+/-0.574)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.585 ms (+/-1.272)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 12.534 ms (+/-3.122)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.382 ms (+/-0.655)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 286.638 ms (+/-8.557)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 293.990 ms (+/-7.980)
+
+Workload: 02_numerical_computation\comparisons\fft.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.292 ms (+/-1.197)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.747 ms (+/-0.680)
+
+Workload: 02_numerical_computation\comparisons\fft.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.805 ms (+/-0.559)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.503 ms (+/-0.421)
+
+Workload: 02_numerical_computation\comparisons\fft.go
+  Target: Go release (go_release)
+
+Workload: 02_numerical_computation\comparisons\fft.py
+  Target: CPython (python_cpython)
+    Result: 28.356 ms (+/-1.595)
+
+Workload: 02_numerical_computation\comparisons\fft.rs
+  Target: Rust release (rust_release)
+    Result: 9.816 ms (+/-0.460)
+
+Workload: 02_numerical_computation\comparisons\matrix_multiply.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.750 ms (+/-0.296)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.577 ms (+/-0.553)
+
+Workload: 02_numerical_computation\comparisons\matrix_multiply.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.343 ms (+/-0.287)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.715 ms (+/-0.361)
+
+Workload: 02_numerical_computation\comparisons\matrix_multiply.go
+  Target: Go release (go_release)
+
+Workload: 02_numerical_computation\comparisons\matrix_multiply.py
+  Target: CPython (python_cpython)
+    Result: 44.073 ms (+/-1.930)
+
+Workload: 02_numerical_computation\comparisons\matrix_multiply.rs
+  Target: Rust release (rust_release)
+    Result: 11.115 ms (+/-1.127)
+
+Workload: 02_numerical_computation\comparisons\monte_carlo_pi.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 13.245 ms (+/-0.757)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 12.704 ms (+/-0.433)
+
+Workload: 02_numerical_computation\comparisons\monte_carlo_pi.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.905 ms (+/-0.630)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 12.880 ms (+/-0.340)
+
+Workload: 02_numerical_computation\comparisons\monte_carlo_pi.go
+  Target: Go release (go_release)
+
+Workload: 02_numerical_computation\comparisons\monte_carlo_pi.py
+  Target: CPython (python_cpython)
+    Result: 178.427 ms (+/-3.090)
+
+Workload: 02_numerical_computation\comparisons\monte_carlo_pi.rs
+  Target: Rust release (rust_release)
+    Result: 14.266 ms (+/-0.619)
+
+Workload: 02_numerical_computation\comparisons\polynomial_eval.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 43.169 ms (+/-1.961)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.889 ms (+/-0.968)
+
+Workload: 02_numerical_computation\comparisons\polynomial_eval.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 45.041 ms (+/-1.543)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 12.647 ms (+/-0.530)
+
+Workload: 02_numerical_computation\comparisons\polynomial_eval.go
+  Target: Go release (go_release)
+
+Workload: 02_numerical_computation\comparisons\polynomial_eval.py
+  Target: CPython (python_cpython)
+    Result: 981.132 ms (+/-33.947)
+
+Workload: 02_numerical_computation\comparisons\polynomial_eval.rs
+  Target: Rust release (rust_release)
+    Result: 46.351 ms (+/-1.879)
+
+Workload: 02_numerical_computation\comparisons\tensor_operations.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.252 ms (+/-0.474)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.063 ms (+/-0.929)
+
+Workload: 02_numerical_computation\comparisons\tensor_operations.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.278 ms (+/-1.237)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.508 ms (+/-0.597)
+
+Workload: 02_numerical_computation\comparisons\tensor_operations.go
+  Target: Go release (go_release)
+
+Workload: 02_numerical_computation\comparisons\tensor_operations.py
+  Target: CPython (python_cpython)
+    Result: 39.900 ms (+/-1.544)
+
+Workload: 02_numerical_computation\comparisons\tensor_operations.rs
+  Target: Rust release (rust_release)
+    Result: 11.192 ms (+/-0.462)
+
+Workload: 02_numerical_computation\fft.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.580 ms (+/-0.583)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 12.735 ms (+/-0.476)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.238 ms (+/-1.143)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.472 ms (+/-0.322)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 216.206 ms (+/-11.315)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 243.484 ms (+/-27.917)
+
+Workload: 02_numerical_computation\matrix_multiply.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.458 ms (+/-1.084)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.700 ms (+/-1.154)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 14.088 ms (+/-2.230)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.904 ms (+/-0.535)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 252.015 ms (+/-35.947)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 239.887 ms (+/-44.772)
+
+Workload: 02_numerical_computation\monte_carlo_pi.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 17.310 ms (+/-1.492)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 15.115 ms (+/-0.867)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 18.029 ms (+/-2.454)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 15.322 ms (+/-0.472)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 245.162 ms (+/-12.479)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 242.827 ms (+/-16.364)
+
+Workload: 02_numerical_computation\polynomial_eval.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 44.110 ms (+/-0.797)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 43.873 ms (+/-0.505)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 44.314 ms (+/-0.658)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 44.387 ms (+/-1.065)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 275.070 ms (+/-12.001)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 266.147 ms (+/-3.114)
+
+Workload: 02_numerical_computation\tensor_operations.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.223 ms (+/-1.129)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.668 ms (+/-0.706)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 15.336 ms (+/-1.246)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.459 ms (+/-1.512)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 315.445 ms (+/-47.552)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 266.206 ms (+/-38.492)
+
+Workload: 03_data_structures\btree_operations.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.225 ms (+/-0.514)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.603 ms (+/-0.897)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.430 ms (+/-1.056)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.086 ms (+/-1.090)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 228.743 ms (+/-4.070)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 228.515 ms (+/-22.307)
+
+Workload: 03_data_structures\comparisons\btree_operations.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.203 ms (+/-0.816)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.908 ms (+/-0.738)
+
+Workload: 03_data_structures\comparisons\btree_operations.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.620 ms (+/-2.456)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 15.480 ms (+/-2.829)
+
+Workload: 03_data_structures\comparisons\btree_operations.go
+  Target: Go release (go_release)
+
+Workload: 03_data_structures\comparisons\btree_operations.py
+  Target: CPython (python_cpython)
+    Result: 29.963 ms (+/-2.477)
+
+Workload: 03_data_structures\comparisons\btree_operations.rs
+  Target: Rust release (rust_release)
+    Result: 10.435 ms (+/-0.734)
+
+Workload: 03_data_structures\comparisons\hashmap_operations.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 17.820 ms (+/-0.615)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 19.286 ms (+/-1.926)
+
+Workload: 03_data_structures\comparisons\hashmap_operations.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 17.293 ms (+/-1.149)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 17.576 ms (+/-0.450)
+
+Workload: 03_data_structures\comparisons\hashmap_operations.go
+  Target: Go release (go_release)
+
+Workload: 03_data_structures\comparisons\hashmap_operations.py
+  Target: CPython (python_cpython)
+    Result: 815.535 ms (+/-49.802)
+
+Workload: 03_data_structures\comparisons\hashmap_operations.rs
+  Target: Rust release (rust_release)
+    Result: 25.003 ms (+/-5.648)
+
+Workload: 03_data_structures\comparisons\linked_list.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 36.938 ms (+/-0.841)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 35.544 ms (+/-1.386)
+
+Workload: 03_data_structures\comparisons\linked_list.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 36.550 ms (+/-1.417)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 37.181 ms (+/-0.898)
+
+Workload: 03_data_structures\comparisons\linked_list.go
+  Target: Go release (go_release)
+
+Workload: 03_data_structures\comparisons\linked_list.py
+  Target: CPython (python_cpython)
+    Result: 742.863 ms (+/-24.934)
+
+Workload: 03_data_structures\comparisons\linked_list.rs
+  Target: Rust release (rust_release)
+    Result: 38.322 ms (+/-0.837)
+
+Workload: 03_data_structures\comparisons\ring_buffer.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 46.619 ms (+/-3.589)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 42.036 ms (+/-0.764)
+
+Workload: 03_data_structures\comparisons\ring_buffer.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 45.876 ms (+/-1.114)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 43.423 ms (+/-0.915)
+
+Workload: 03_data_structures\comparisons\ring_buffer.go
+  Target: Go release (go_release)
+
+Workload: 03_data_structures\comparisons\ring_buffer.py
+  Target: CPython (python_cpython)
+    Result: 1871.946 ms (+/-21.525)
+
+Workload: 03_data_structures\comparisons\ring_buffer.rs
+  Target: Rust release (rust_release)
+    Result: 44.590 ms (+/-4.519)
+
+Workload: 03_data_structures\hashmap_operations.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 20.996 ms (+/-1.083)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 21.133 ms (+/-0.865)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 17.007 ms (+/-0.992)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 17.996 ms (+/-0.919)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 268.851 ms (+/-17.785)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 253.779 ms (+/-18.430)
+
+Workload: 03_data_structures\linked_list.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 42.260 ms (+/-0.784)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 41.588 ms (+/-1.598)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 37.727 ms (+/-4.127)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 36.793 ms (+/-0.668)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 262.046 ms (+/-7.937)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 260.721 ms (+/-6.034)
+
+Workload: 03_data_structures\ring_buffer.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 58.408 ms (+/-0.863)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 58.255 ms (+/-0.632)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 42.614 ms (+/-0.805)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 42.034 ms (+/-0.502)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 285.814 ms (+/-9.913)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 288.494 ms (+/-11.243)
+
+Workload: 04_compression_kernels\block_sort.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 12.075 ms (+/-0.464)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.893 ms (+/-1.226)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.207 ms (+/-2.675)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.535 ms (+/-0.786)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 238.674 ms (+/-3.600)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 230.280 ms (+/-3.234)
+
+Workload: 04_compression_kernels\comparisons\block_sort.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.245 ms (+/-0.507)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.663 ms (+/-0.859)
+
+Workload: 04_compression_kernels\comparisons\block_sort.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.041 ms (+/-1.663)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.408 ms (+/-0.490)
+
+Workload: 04_compression_kernels\comparisons\block_sort.go
+  Target: Go release (go_release)
+
+Workload: 04_compression_kernels\comparisons\block_sort.py
+  Target: CPython (python_cpython)
+    Result: 34.448 ms (+/-1.606)
+
+Workload: 04_compression_kernels\comparisons\block_sort.rs
+  Target: Rust release (rust_release)
+    Result: 12.019 ms (+/-0.673)
+
+Workload: 04_compression_kernels\comparisons\huffman_coding.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.690 ms (+/-0.820)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.553 ms (+/-0.377)
+
+Workload: 04_compression_kernels\comparisons\huffman_coding.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.175 ms (+/-1.281)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.207 ms (+/-0.393)
+
+Workload: 04_compression_kernels\comparisons\huffman_coding.go
+  Target: Go release (go_release)
+
+Workload: 04_compression_kernels\comparisons\huffman_coding.py
+  Target: CPython (python_cpython)
+    Result: 28.529 ms (+/-0.933)
+
+Workload: 04_compression_kernels\comparisons\huffman_coding.rs
+  Target: Rust release (rust_release)
+    Result: 14.886 ms (+/-5.767)
+
+Workload: 04_compression_kernels\comparisons\lz77_compress.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.328 ms (+/-1.124)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.208 ms (+/-1.125)
+
+Workload: 04_compression_kernels\comparisons\lz77_compress.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 12.308 ms (+/-0.670)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.460 ms (+/-0.454)
+
+Workload: 04_compression_kernels\comparisons\lz77_compress.go
+  Target: Go release (go_release)
+
+Workload: 04_compression_kernels\comparisons\lz77_compress.py
+  Target: CPython (python_cpython)
+    Result: 30.182 ms (+/-1.593)
+
+Workload: 04_compression_kernels\comparisons\lz77_compress.rs
+  Target: Rust release (rust_release)
+    Result: 11.787 ms (+/-1.056)
+
+Workload: 04_compression_kernels\comparisons\rle_codec.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 13.057 ms (+/-0.703)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.499 ms (+/-0.827)
+
+Workload: 04_compression_kernels\comparisons\rle_codec.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.165 ms (+/-0.580)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 13.170 ms (+/-0.358)
+
+Workload: 04_compression_kernels\comparisons\rle_codec.go
+  Target: Go release (go_release)
+
+Workload: 04_compression_kernels\comparisons\rle_codec.py
+  Target: CPython (python_cpython)
+    Result: 61.019 ms (+/-1.233)
+
+Workload: 04_compression_kernels\comparisons\rle_codec.rs
+  Target: Rust release (rust_release)
+    Result: 13.746 ms (+/-0.344)
+
+Workload: 04_compression_kernels\huffman_coding.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.674 ms (+/-0.418)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.347 ms (+/-0.617)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.124 ms (+/-0.883)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.316 ms (+/-0.585)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 230.802 ms (+/-19.576)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 230.833 ms (+/-8.800)
+
+Workload: 04_compression_kernels\lz77_compress.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 12.715 ms (+/-1.393)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.523 ms (+/-0.367)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.727 ms (+/-0.654)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.242 ms (+/-0.474)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 232.780 ms (+/-2.498)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 233.861 ms (+/-6.260)
+
+Workload: 04_compression_kernels\rle_codec.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.381 ms (+/-0.715)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.901 ms (+/-0.608)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.585 ms (+/-0.556)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.358 ms (+/-0.772)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 234.922 ms (+/-3.651)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 237.922 ms (+/-12.224)
+
+Workload: 05_ml_primitives\autodiff.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 24.986 ms (+/-0.770)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 24.645 ms (+/-0.708)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 25.707 ms (+/-0.636)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 26.216 ms (+/-4.499)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 243.338 ms (+/-4.383)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 242.962 ms (+/-4.108)
+
+Workload: 05_ml_primitives\comparisons\autodiff.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 25.217 ms (+/-0.582)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 32.316 ms (+/-5.207)
+
+Workload: 05_ml_primitives\comparisons\autodiff.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 36.027 ms (+/-9.242)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 24.583 ms (+/-5.169)
+
+Workload: 05_ml_primitives\comparisons\autodiff.go
+  Target: Go release (go_release)
+
+Workload: 05_ml_primitives\comparisons\autodiff.py
+  Target: CPython (python_cpython)
+    Result: 407.296 ms (+/-115.214)
+
+Workload: 05_ml_primitives\comparisons\autodiff.rs
+  Target: Rust release (rust_release)
+    Result: 24.495 ms (+/-0.846)
+
+Workload: 05_ml_primitives\comparisons\convolution.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.663 ms (+/-0.414)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.460 ms (+/-0.229)
+
+Workload: 05_ml_primitives\comparisons\convolution.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.783 ms (+/-0.492)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.297 ms (+/-0.828)
+
+Workload: 05_ml_primitives\comparisons\convolution.go
+  Target: Go release (go_release)
+
+Workload: 05_ml_primitives\comparisons\convolution.py
+  Target: CPython (python_cpython)
+    Result: 49.144 ms (+/-3.893)
+
+Workload: 05_ml_primitives\comparisons\convolution.rs
+  Target: Rust release (rust_release)
+    Result: 10.671 ms (+/-0.643)
+
+Workload: 05_ml_primitives\comparisons\softmax.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 26.099 ms (+/-1.693)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 24.109 ms (+/-1.796)
+
+Workload: 05_ml_primitives\comparisons\softmax.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 25.792 ms (+/-0.554)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 22.190 ms (+/-0.567)
+
+Workload: 05_ml_primitives\comparisons\softmax.go
+  Target: Go release (go_release)
+
+Workload: 05_ml_primitives\comparisons\softmax.py
+  Target: CPython (python_cpython)
+    Result: 975.902 ms (+/-19.319)
+
+Workload: 05_ml_primitives\comparisons\softmax.rs
+  Target: Rust release (rust_release)
+    Result: 26.865 ms (+/-3.356)
+
+Workload: 05_ml_primitives\comparisons\tensor_matmul.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.262 ms (+/-0.494)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 12.719 ms (+/-0.790)
+
+Workload: 05_ml_primitives\comparisons\tensor_matmul.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.956 ms (+/-0.530)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 13.026 ms (+/-0.758)
+
+Workload: 05_ml_primitives\comparisons\tensor_matmul.go
+  Target: Go release (go_release)
+
+Workload: 05_ml_primitives\comparisons\tensor_matmul.py
+  Target: CPython (python_cpython)
+    Result: 83.448 ms (+/-4.780)
+
+Workload: 05_ml_primitives\comparisons\tensor_matmul.rs
+  Target: Rust release (rust_release)
+    Result: 14.219 ms (+/-1.161)
+
+Workload: 05_ml_primitives\convolution.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.387 ms (+/-0.506)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.248 ms (+/-0.540)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 13.107 ms (+/-1.788)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.607 ms (+/-1.287)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 223.267 ms (+/-11.359)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 255.719 ms (+/-37.193)
+
+Workload: 05_ml_primitives\softmax.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 23.083 ms (+/-0.580)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 24.326 ms (+/-1.002)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 28.790 ms (+/-1.313)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 29.017 ms (+/-0.744)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 261.360 ms (+/-3.781)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 240.818 ms (+/-23.879)
+
+Workload: 05_ml_primitives\tensor_matmul.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 13.001 ms (+/-1.004)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 13.025 ms (+/-1.235)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 13.650 ms (+/-1.103)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.968 ms (+/-1.624)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 223.160 ms (+/-17.150)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 231.590 ms (+/-11.678)
+
+Workload: 06_gpu_compute\conv2d_pytorch.py
+  Target: CPython (python_cpython)
+    [-] Skipping target: missing Python modules: torch
+
+Workload: 06_gpu_compute\conv2d_tensorflow.py
+  Target: CPython (python_cpython)
+    [-] Skipping target: missing Python modules: tensorflow
+
+Workload: 06_gpu_compute\elementwise_cupy.py
+  Target: CPython (python_cpython)
+    [-] Skipping target: missing Python modules: cupy
+
+Workload: 06_gpu_compute\elementwise_numpy.py
+  Target: CPython (python_cpython)
+    [!] Execution failed: Non-deterministic output across runs
+
+Workload: 06_gpu_compute\elementwise_pytorch.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\matmul_cupy.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\matmul_numba.py
+  Target: CPython (python_cpython)
+    [-] Skipping target: missing Python modules: numba
+
+Workload: 06_gpu_compute\matmul_numpy.py
+  Target: CPython (python_cpython)
+    [!] Execution failed: Non-deterministic output across runs
+
+Workload: 06_gpu_compute\matmul_pytorch.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\matmul_tensorflow.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\reduction_cupy.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\reduction_numpy.py
+  Target: CPython (python_cpython)
+    [!] Execution failed: Non-deterministic output across runs
+
+Workload: 06_gpu_compute\reduction_pytorch.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\reduction_tensorflow.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\softmax_cupy.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\softmax_pytorch.py
+  Target: CPython (python_cpython)
+
+Workload: 06_gpu_compute\softmax_tensorflow.py
+  Target: CPython (python_cpython)
+
+Workload: 07_cryptography_kernels\aes_sbox.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 12.149 ms (+/-1.047)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.956 ms (+/-0.706)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.463 ms (+/-0.474)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.820 ms (+/-0.865)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 275.966 ms (+/-6.073)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 283.566 ms (+/-7.029)
+
+Workload: 07_cryptography_kernels\chacha20_cipher.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 19.529 ms (+/-0.917)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 18.523 ms (+/-0.567)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 12.148 ms (+/-1.070)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.414 ms (+/-0.952)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 625.976 ms (+/-16.445)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 626.729 ms (+/-9.620)
+
+Workload: 07_cryptography_kernels\comparisons\aes_sbox.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.081 ms (+/-1.368)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.851 ms (+/-1.065)
+
+Workload: 07_cryptography_kernels\comparisons\aes_sbox.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.767 ms (+/-0.350)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.944 ms (+/-1.344)
+
+Workload: 07_cryptography_kernels\comparisons\aes_sbox.go
+  Target: Go release (go_release)
+
+Workload: 07_cryptography_kernels\comparisons\aes_sbox.py
+  Target: CPython (python_cpython)
+    Result: 33.194 ms (+/-1.700)
+
+Workload: 07_cryptography_kernels\comparisons\aes_sbox.rs
+  Target: Rust release (rust_release)
+    Result: 11.938 ms (+/-1.142)
+
+Workload: 07_cryptography_kernels\comparisons\chacha20_cipher.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.056 ms (+/-1.181)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.684 ms (+/-0.541)
+
+Workload: 07_cryptography_kernels\comparisons\chacha20_cipher.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.075 ms (+/-0.658)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.119 ms (+/-0.396)
+
+Workload: 07_cryptography_kernels\comparisons\chacha20_cipher.go
+  Target: Go release (go_release)
+
+Workload: 07_cryptography_kernels\comparisons\chacha20_cipher.py
+  Target: CPython (python_cpython)
+    Result: 63.325 ms (+/-1.945)
+
+Workload: 07_cryptography_kernels\comparisons\chacha20_cipher.rs
+  Target: Rust release (rust_release)
+    Result: 11.365 ms (+/-0.426)
+
+Workload: 07_cryptography_kernels\comparisons\crc32_checksum.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 10.760 ms (+/-0.752)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.279 ms (+/-1.548)
+
+Workload: 07_cryptography_kernels\comparisons\crc32_checksum.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.841 ms (+/-0.500)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.047 ms (+/-0.420)
+
+Workload: 07_cryptography_kernels\comparisons\crc32_checksum.go
+  Target: Go release (go_release)
+
+Workload: 07_cryptography_kernels\comparisons\crc32_checksum.py
+  Target: CPython (python_cpython)
+    Result: 42.220 ms (+/-0.451)
+
+Workload: 07_cryptography_kernels\comparisons\crc32_checksum.rs
+  Target: Rust release (rust_release)
+    Result: 11.784 ms (+/-0.449)
+
+Workload: 07_cryptography_kernels\comparisons\sha256_hash.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 13.029 ms (+/-0.728)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 12.478 ms (+/-1.557)
+
+Workload: 07_cryptography_kernels\comparisons\sha256_hash.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.627 ms (+/-0.506)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.951 ms (+/-0.571)
+
+Workload: 07_cryptography_kernels\comparisons\sha256_hash.go
+  Target: Go release (go_release)
+
+Workload: 07_cryptography_kernels\comparisons\sha256_hash.py
+  Target: CPython (python_cpython)
+    Result: 52.319 ms (+/-4.590)
+
+Workload: 07_cryptography_kernels\comparisons\sha256_hash.rs
+  Target: Rust release (rust_release)
+    Result: 11.802 ms (+/-0.774)
+
+Workload: 07_cryptography_kernels\crc32_checksum.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.057 ms (+/-0.350)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.398 ms (+/-1.300)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.569 ms (+/-2.113)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.456 ms (+/-1.411)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 242.008 ms (+/-16.025)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 254.665 ms (+/-23.836)
+
+Workload: 07_cryptography_kernels\sha256_hash.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 35.918 ms (+/-3.670)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 30.561 ms (+/-0.584)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 15.162 ms (+/-5.300)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 12.452 ms (+/-1.440)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 886.859 ms (+/-24.122)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 863.843 ms (+/-16.408)
+
+Workload: 08_media_encoding_kernels\audio_lpc.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.296 ms (+/-0.735)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.534 ms (+/-0.707)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.959 ms (+/-1.477)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.999 ms (+/-0.730)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 228.749 ms (+/-16.963)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 233.596 ms (+/-11.347)
+
+Workload: 08_media_encoding_kernels\comparisons\audio_lpc.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.045 ms (+/-0.627)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.018 ms (+/-0.724)
+
+Workload: 08_media_encoding_kernels\comparisons\audio_lpc.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.872 ms (+/-1.571)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.602 ms (+/-0.501)
+
+Workload: 08_media_encoding_kernels\comparisons\audio_lpc.go
+  Target: Go release (go_release)
+
+Workload: 08_media_encoding_kernels\comparisons\audio_lpc.py
+  Target: CPython (python_cpython)
+    Result: 60.124 ms (+/-1.247)
+
+Workload: 08_media_encoding_kernels\comparisons\audio_lpc.rs
+  Target: Rust release (rust_release)
+    Result: 11.440 ms (+/-0.607)
+
+Workload: 08_media_encoding_kernels\comparisons\dct_transform.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.148 ms (+/-1.108)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.517 ms (+/-0.637)
+
+Workload: 08_media_encoding_kernels\comparisons\dct_transform.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.442 ms (+/-0.692)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.608 ms (+/-2.020)
+
+Workload: 08_media_encoding_kernels\comparisons\dct_transform.go
+  Target: Go release (go_release)
+
+Workload: 08_media_encoding_kernels\comparisons\dct_transform.py
+  Target: CPython (python_cpython)
+    Result: 115.081 ms (+/-7.160)
+
+Workload: 08_media_encoding_kernels\comparisons\dct_transform.rs
+  Target: Rust release (rust_release)
+    Result: 11.578 ms (+/-0.601)
+
+Workload: 08_media_encoding_kernels\comparisons\motion_estimation.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 14.121 ms (+/-0.577)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.466 ms (+/-0.437)
+
+Workload: 08_media_encoding_kernels\comparisons\motion_estimation.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 14.815 ms (+/-0.941)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 14.067 ms (+/-0.612)
+
+Workload: 08_media_encoding_kernels\comparisons\motion_estimation.go
+  Target: Go release (go_release)
+
+Workload: 08_media_encoding_kernels\comparisons\motion_estimation.py
+  Target: CPython (python_cpython)
+    Result: 926.463 ms (+/-99.974)
+
+Workload: 08_media_encoding_kernels\comparisons\motion_estimation.rs
+  Target: Rust release (rust_release)
+    Result: 15.551 ms (+/-2.375)
+
+Workload: 08_media_encoding_kernels\comparisons\pixel_filter.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 10.963 ms (+/-0.503)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.253 ms (+/-0.960)
+
+Workload: 08_media_encoding_kernels\comparisons\pixel_filter.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.333 ms (+/-0.382)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.136 ms (+/-0.501)
+
+Workload: 08_media_encoding_kernels\comparisons\pixel_filter.go
+  Target: Go release (go_release)
+
+Workload: 08_media_encoding_kernels\comparisons\pixel_filter.py
+  Target: CPython (python_cpython)
+    Result: 99.827 ms (+/-4.654)
+
+Workload: 08_media_encoding_kernels\comparisons\pixel_filter.rs
+  Target: Rust release (rust_release)
+    Result: 12.017 ms (+/-1.191)
+
+Workload: 08_media_encoding_kernels\dct_transform.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.771 ms (+/-1.009)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 12.152 ms (+/-0.608)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.828 ms (+/-1.380)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.982 ms (+/-0.594)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 227.899 ms (+/-6.533)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 230.569 ms (+/-9.316)
+
+Workload: 08_media_encoding_kernels\motion_estimation.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 444.947 ms (+/-7.414)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 443.309 ms (+/-9.071)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 12.572 ms (+/-0.960)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 14.462 ms (+/-0.569)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 30825.263 ms (+/-5956.801)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 23343.255 ms (+/-169.130)
+
+Workload: 08_media_encoding_kernels\pixel_filter.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 19.765 ms (+/-0.643)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 20.751 ms (+/-0.671)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.819 ms (+/-0.606)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.183 ms (+/-0.301)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 693.249 ms (+/-54.211)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 644.766 ms (+/-8.002)
+
+Workload: 09_compilation_metrics\complex_generics.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.947 ms (+/-0.200)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.984 ms (+/-0.977)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.781 ms (+/-0.479)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.953 ms (+/-0.374)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 286.747 ms (+/-4.396)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 288.269 ms (+/-7.963)
+
+Workload: 09_compilation_metrics\large_program.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.774 ms (+/-1.103)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.447 ms (+/-0.438)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.862 ms (+/-0.268)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.962 ms (+/-0.476)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 218.418 ms (+/-4.965)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 222.063 ms (+/-8.935)
+
+Workload: 09_compilation_metrics\medium_program.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.821 ms (+/-0.322)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.809 ms (+/-0.294)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.834 ms (+/-0.259)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.559 ms (+/-0.321)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 203.998 ms (+/-8.588)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 199.850 ms (+/-4.786)
+
+Workload: 09_compilation_metrics\tiny_program.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.911 ms (+/-1.068)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.196 ms (+/-0.510)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.564 ms (+/-1.165)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.765 ms (+/-0.281)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.513 ms (+/-3.262)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 205.027 ms (+/-5.085)
+
+Workload: 10_compiler_pipeline\backends\c_output_verify.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.071 ms (+/-0.244)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.926 ms (+/-0.701)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.727 ms (+/-0.283)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.076 ms (+/-1.800)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 200.112 ms (+/-2.285)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 198.575 ms (+/-5.197)
+
+Workload: 10_compiler_pipeline\backends\jit_execution.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.872 ms (+/-0.402)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.353 ms (+/-0.566)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.857 ms (+/-1.042)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.107 ms (+/-1.269)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 200.394 ms (+/-6.380)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 199.430 ms (+/-2.571)
+
+Workload: 10_compiler_pipeline\backends\llvm_output_verify.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.986 ms (+/-0.383)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.768 ms (+/-0.394)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.030 ms (+/-0.198)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.722 ms (+/-0.303)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 203.934 ms (+/-5.242)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 203.288 ms (+/-6.754)
+
+Workload: 10_compiler_pipeline\control_flow\early_return.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.049 ms (+/-1.167)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.945 ms (+/-0.536)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.594 ms (+/-0.895)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.469 ms (+/-1.302)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 202.150 ms (+/-9.856)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 201.001 ms (+/-3.374)
+
+Workload: 10_compiler_pipeline\control_flow\if_else_chains.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.015 ms (+/-0.936)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.732 ms (+/-1.466)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.611 ms (+/-0.312)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.725 ms (+/-0.480)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    [!] Execution failed: Non-zero exit code: 1
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    [!] Execution failed: Non-zero exit code: 1
+
+Workload: 10_compiler_pipeline\control_flow\nested_control.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.548 ms (+/-0.325)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.448 ms (+/-0.312)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.173 ms (+/-0.959)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.706 ms (+/-0.203)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 207.469 ms (+/-11.105)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 204.072 ms (+/-4.741)
+
+Workload: 10_compiler_pipeline\control_flow\while_loops.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.232 ms (+/-0.223)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.883 ms (+/-0.270)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.780 ms (+/-0.341)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.931 ms (+/-0.467)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 201.380 ms (+/-4.357)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 201.553 ms (+/-20.567)
+
+Workload: 10_compiler_pipeline\functions\function_composition.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.915 ms (+/-0.307)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.786 ms (+/-0.356)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.194 ms (+/-1.093)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.748 ms (+/-1.221)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.151 ms (+/-5.536)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 204.067 ms (+/-2.884)
+
+Workload: 10_compiler_pipeline\functions\multiple_functions.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.986 ms (+/-1.260)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.485 ms (+/-1.431)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.213 ms (+/-0.339)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.989 ms (+/-0.521)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 205.004 ms (+/-7.042)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 205.485 ms (+/-5.350)
+
+Workload: 10_compiler_pipeline\functions\mutual_recursion.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.278 ms (+/-0.522)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.937 ms (+/-1.377)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.019 ms (+/-0.602)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.992 ms (+/-0.582)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 205.296 ms (+/-5.548)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 205.196 ms (+/-5.943)
+
+Workload: 10_compiler_pipeline\functions\recursion.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.053 ms (+/-0.365)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.053 ms (+/-1.208)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.922 ms (+/-0.982)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.102 ms (+/-0.508)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 205.120 ms (+/-5.066)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 203.277 ms (+/-6.331)
+
+Workload: 10_compiler_pipeline\lexer\keywords.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.663 ms (+/-0.604)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.818 ms (+/-0.252)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.728 ms (+/-0.431)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.396 ms (+/-0.420)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 201.077 ms (+/-3.860)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 209.891 ms (+/-30.408)
+
+Workload: 10_compiler_pipeline\lexer\numeric_literals.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.194 ms (+/-0.500)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.204 ms (+/-0.513)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.989 ms (+/-2.000)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.021 ms (+/-1.155)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 202.989 ms (+/-2.505)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 201.486 ms (+/-4.388)
+
+Workload: 10_compiler_pipeline\lexer\operators.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.633 ms (+/-0.268)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.979 ms (+/-0.248)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.568 ms (+/-0.343)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.792 ms (+/-0.210)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 203.295 ms (+/-6.193)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 199.054 ms (+/-2.409)
+
+Workload: 10_compiler_pipeline\lexer\string_literals.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.288 ms (+/-0.388)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.125 ms (+/-0.362)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.548 ms (+/-1.386)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.700 ms (+/-0.583)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.141 ms (+/-7.668)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.404 ms (+/-5.806)
+
+Workload: 10_compiler_pipeline\memory\mutability.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.820 ms (+/-1.856)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.948 ms (+/-0.335)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.689 ms (+/-0.242)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.941 ms (+/-0.517)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.074 ms (+/-4.776)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.870 ms (+/-6.257)
+
+Workload: 10_compiler_pipeline\memory\shadowing.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.835 ms (+/-0.313)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.890 ms (+/-0.439)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    [!] Compilation failed: [1;32m✓[0m Generated: C:\Users\ksvik\Projects\Agam-Lang\benchmarks\suites\10_compiler_pipeline\memory\shadowing.agam -> C:\Users\ksvik\Projects\Agam-Lang\benchmarks\build\10_compiler_pipeline__memory__shadowing_agam\agam_c_o3_call_cache
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    [!] Compilation failed: [1;32m✓[0m Generated: C:\Users\ksvik\Projects\Agam-Lang\benchmarks\suites\10_compiler_pipeline\memory\shadowing.agam -> C:\Users\ksvik\Projects\Agam-Lang\benchmarks\build\10_compiler_pipeline__memory__shadowing_agam\agam_c_o3_call_cache
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 202.788 ms (+/-7.109)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 200.327 ms (+/-29.704)
+
+Workload: 10_compiler_pipeline\memory\variable_scoping.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.830 ms (+/-1.177)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.640 ms (+/-1.227)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.742 ms (+/-0.262)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.211 ms (+/-0.501)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 201.670 ms (+/-5.684)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 201.112 ms (+/-1.270)
+
+Workload: 10_compiler_pipeline\operators\arithmetic.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.849 ms (+/-0.383)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.996 ms (+/-0.378)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.948 ms (+/-0.283)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.005 ms (+/-0.446)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 203.336 ms (+/-4.113)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 198.460 ms (+/-4.775)
+
+Workload: 10_compiler_pipeline\operators\comparison.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.058 ms (+/-0.925)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.911 ms (+/-1.152)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.863 ms (+/-1.292)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.776 ms (+/-1.691)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 199.498 ms (+/-5.777)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 207.037 ms (+/-5.951)
+
+Workload: 10_compiler_pipeline\operators\precedence.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.738 ms (+/-0.225)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.026 ms (+/-0.406)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.394 ms (+/-1.029)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.516 ms (+/-0.412)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 203.943 ms (+/-4.929)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 199.936 ms (+/-0.947)
+
+Workload: 10_compiler_pipeline\parser\annotations.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.181 ms (+/-0.374)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.041 ms (+/-1.365)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.036 ms (+/-0.980)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.688 ms (+/-1.435)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 238.988 ms (+/-33.058)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 232.810 ms (+/-35.211)
+
+Workload: 10_compiler_pipeline\parser\basic_expressions.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.884 ms (+/-0.417)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.491 ms (+/-2.619)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.136 ms (+/-0.499)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.038 ms (+/-0.757)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 207.105 ms (+/-3.980)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.821 ms (+/-9.083)
+
+Workload: 10_compiler_pipeline\parser\control_flow.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.636 ms (+/-0.327)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.896 ms (+/-0.583)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.834 ms (+/-1.098)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.732 ms (+/-0.746)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 207.298 ms (+/-3.406)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 204.100 ms (+/-4.867)
+
+Workload: 10_compiler_pipeline\parser\function_definitions.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.315 ms (+/-1.175)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.045 ms (+/-1.150)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.847 ms (+/-0.306)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.021 ms (+/-0.402)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 202.310 ms (+/-2.280)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 204.985 ms (+/-5.363)
+
+Workload: 10_compiler_pipeline\parser\nested_structures.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.022 ms (+/-0.569)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.177 ms (+/-0.839)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.887 ms (+/-0.472)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.726 ms (+/-1.386)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 206.159 ms (+/-3.215)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 206.630 ms (+/-60.628)
+
+Workload: 10_compiler_pipeline\type_system\function_signatures.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.785 ms (+/-0.310)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.263 ms (+/-1.051)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.282 ms (+/-1.321)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.839 ms (+/-0.148)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.421 ms (+/-6.081)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 206.926 ms (+/-4.675)
+
+Workload: 10_compiler_pipeline\type_system\integer_types.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.823 ms (+/-0.439)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.109 ms (+/-0.198)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.725 ms (+/-0.380)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.033 ms (+/-0.366)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 207.154 ms (+/-3.897)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 198.314 ms (+/-11.833)
+
+Workload: 10_compiler_pipeline\type_system\type_inference.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.293 ms (+/-0.406)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.604 ms (+/-0.408)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.714 ms (+/-0.322)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.438 ms (+/-1.272)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 204.415 ms (+/-4.329)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.224 ms (+/-2.286)
+
+Workload: 11_ray_tracing\bvh_traversal.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 12.900 ms (+/-1.281)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 13.104 ms (+/-0.896)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.773 ms (+/-0.423)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.803 ms (+/-0.337)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 376.456 ms (+/-6.523)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 370.985 ms (+/-9.074)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.c
+  Target: Clang C O3 (c_clang_o3)
+    [!] Execution failed: Non-zero exit code: 3221225620
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    [!] Execution failed: Non-zero exit code: 3221225620
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    [!] Execution failed: Non-zero exit code: 3221225620
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    [!] Execution failed: Non-zero exit code: 3221225620
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.go
+  Target: Go release (go_release)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.py
+  Target: CPython (python_cpython)
+    [!] Execution failed: Non-zero exit code: 1
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.rs
+  Target: Rust release (rust_release)
+    [!] Execution failed: Non-zero exit code: 101
+
+Workload: 11_ray_tracing\comparisons\photon_mapping.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 22.828 ms (+/-1.493)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 12.504 ms (+/-0.440)
+
+Workload: 11_ray_tracing\comparisons\photon_mapping.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 23.529 ms (+/-2.215)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 12.495 ms (+/-0.450)
+
+Workload: 11_ray_tracing\comparisons\photon_mapping.go
+  Target: Go release (go_release)
+
+Workload: 11_ray_tracing\comparisons\photon_mapping.py
+  Target: CPython (python_cpython)
+    Result: 1028.021 ms (+/-25.532)
+
+Workload: 11_ray_tracing\comparisons\photon_mapping.rs
+  Target: Rust release (rust_release)
+    Result: 22.287 ms (+/-2.397)
+
+Workload: 11_ray_tracing\comparisons\ray_sphere_intersect.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.702 ms (+/-1.180)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.911 ms (+/-0.873)
+
+Workload: 11_ray_tracing\comparisons\ray_sphere_intersect.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.852 ms (+/-0.914)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.984 ms (+/-0.439)
+
+Workload: 11_ray_tracing\comparisons\ray_sphere_intersect.go
+  Target: Go release (go_release)
+
+Workload: 11_ray_tracing\comparisons\ray_sphere_intersect.py
+  Target: CPython (python_cpython)
+    Result: 33.197 ms (+/-1.404)
+
+Workload: 11_ray_tracing\comparisons\ray_sphere_intersect.rs
+  Target: Rust release (rust_release)
+    Result: 12.352 ms (+/-1.363)
+
+Workload: 11_ray_tracing\comparisons\zbuffer_rasterize.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 27.559 ms (+/-1.090)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 27.598 ms (+/-1.571)
+
+Workload: 11_ray_tracing\comparisons\zbuffer_rasterize.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 26.364 ms (+/-0.987)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 26.045 ms (+/-1.402)
+
+Workload: 11_ray_tracing\comparisons\zbuffer_rasterize.go
+  Target: Go release (go_release)
+
+Workload: 11_ray_tracing\comparisons\zbuffer_rasterize.py
+  Target: CPython (python_cpython)
+    Result: 2421.298 ms (+/-26.342)
+
+Workload: 11_ray_tracing\comparisons\zbuffer_rasterize.rs
+  Target: Rust release (rust_release)
+    Result: 31.500 ms (+/-1.302)
+
+Workload: 11_ray_tracing\photon_mapping.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 25.858 ms (+/-1.167)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 25.978 ms (+/-1.693)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 21.947 ms (+/-1.203)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 21.685 ms (+/-1.919)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 237.090 ms (+/-6.151)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 235.211 ms (+/-5.307)
+
+Workload: 11_ray_tracing\ray_sphere_intersect.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 9.911 ms (+/-0.201)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.591 ms (+/-0.493)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.603 ms (+/-0.522)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.421 ms (+/-0.539)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 214.037 ms (+/-5.755)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 216.692 ms (+/-6.591)
+
+Workload: 11_ray_tracing\zbuffer_rasterize.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 26.228 ms (+/-1.619)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 23.964 ms (+/-1.363)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 28.518 ms (+/-1.849)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 28.144 ms (+/-1.634)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 263.313 ms (+/-7.578)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 259.526 ms (+/-4.699)
+
+Workload: 12_game_ai\astar_pathfinding.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 223.472 ms (+/-5.624)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 220.525 ms (+/-1.641)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 12.688 ms (+/-0.870)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.005 ms (+/-1.281)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 10293.510 ms (+/-114.088)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 10238.819 ms (+/-87.366)
+
+Workload: 12_game_ai\collision_detection.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 37.322 ms (+/-1.868)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 37.503 ms (+/-1.794)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 33.604 ms (+/-1.697)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 36.111 ms (+/-1.151)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 265.625 ms (+/-4.391)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 269.858 ms (+/-5.781)
+
+Workload: 12_game_ai\comparisons\astar_pathfinding.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.547 ms (+/-0.335)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.462 ms (+/-0.591)
+
+Workload: 12_game_ai\comparisons\astar_pathfinding.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.225 ms (+/-0.627)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 12.853 ms (+/-0.723)
+
+Workload: 12_game_ai\comparisons\astar_pathfinding.go
+  Target: Go release (go_release)
+
+Workload: 12_game_ai\comparisons\astar_pathfinding.py
+  Target: CPython (python_cpython)
+    Result: 442.885 ms (+/-8.958)
+
+Workload: 12_game_ai\comparisons\astar_pathfinding.rs
+  Target: Rust release (rust_release)
+    Result: 13.745 ms (+/-0.739)
+
+Workload: 12_game_ai\comparisons\collision_detection.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 32.450 ms (+/-1.247)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 36.608 ms (+/-1.362)
+
+Workload: 12_game_ai\comparisons\collision_detection.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 32.891 ms (+/-0.934)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 36.651 ms (+/-2.080)
+
+Workload: 12_game_ai\comparisons\collision_detection.go
+  Target: Go release (go_release)
+
+Workload: 12_game_ai\comparisons\collision_detection.py
+  Target: CPython (python_cpython)
+    Result: 2077.525 ms (+/-83.553)
+
+Workload: 12_game_ai\comparisons\collision_detection.rs
+  Target: Rust release (rust_release)
+    Result: 34.599 ms (+/-2.721)
+
+Workload: 12_game_ai\comparisons\flocking_boids.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 33.081 ms (+/-2.508)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 35.555 ms (+/-3.041)
+
+Workload: 12_game_ai\comparisons\flocking_boids.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 33.964 ms (+/-1.605)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 36.618 ms (+/-1.614)
+
+Workload: 12_game_ai\comparisons\flocking_boids.go
+  Target: Go release (go_release)
+
+Workload: 12_game_ai\comparisons\flocking_boids.py
+  Target: CPython (python_cpython)
+    Result: 2001.939 ms (+/-26.345)
+
+Workload: 12_game_ai\comparisons\flocking_boids.rs
+  Target: Rust release (rust_release)
+    Result: 32.574 ms (+/-3.395)
+
+Workload: 12_game_ai\comparisons\minimax_search.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 10.653 ms (+/-0.785)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.500 ms (+/-0.406)
+
+Workload: 12_game_ai\comparisons\minimax_search.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.536 ms (+/-0.431)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.597 ms (+/-0.511)
+
+Workload: 12_game_ai\comparisons\minimax_search.go
+  Target: Go release (go_release)
+
+Workload: 12_game_ai\comparisons\minimax_search.py
+  Target: CPython (python_cpython)
+    Result: 83.910 ms (+/-3.257)
+
+Workload: 12_game_ai\comparisons\minimax_search.rs
+  Target: Rust release (rust_release)
+    Result: 12.176 ms (+/-0.991)
+
+Workload: 12_game_ai\flocking_boids.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 28.173 ms (+/-1.288)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 27.272 ms (+/-1.590)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 35.358 ms (+/-2.120)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 34.070 ms (+/-2.106)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 261.654 ms (+/-11.886)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 261.138 ms (+/-11.731)
+
+Workload: 12_game_ai\minimax_search.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 33.364 ms (+/-1.577)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 33.581 ms (+/-1.465)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.316 ms (+/-0.345)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.815 ms (+/-0.566)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 1313.764 ms (+/-17.574)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 1321.612 ms (+/-15.593)
+
+Workload: 13_simd_vectorization\comparisons\dot_product.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.548 ms (+/-0.277)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.982 ms (+/-0.361)
+
+Workload: 13_simd_vectorization\comparisons\dot_product.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.111 ms (+/-0.475)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.639 ms (+/-0.662)
+
+Workload: 13_simd_vectorization\comparisons\dot_product.go
+  Target: Go release (go_release)
+
+Workload: 13_simd_vectorization\comparisons\dot_product.py
+  Target: CPython (python_cpython)
+    Result: 34.845 ms (+/-1.440)
+
+Workload: 13_simd_vectorization\comparisons\dot_product.rs
+  Target: Rust release (rust_release)
+    Result: 10.290 ms (+/-0.463)
+
+Workload: 13_simd_vectorization\comparisons\image_blur.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 10.058 ms (+/-0.479)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.765 ms (+/-2.298)
+
+Workload: 13_simd_vectorization\comparisons\image_blur.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 9.721 ms (+/-0.194)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 9.972 ms (+/-1.282)
+
+Workload: 13_simd_vectorization\comparisons\image_blur.go
+  Target: Go release (go_release)
+
+Workload: 13_simd_vectorization\comparisons\image_blur.py
+  Target: CPython (python_cpython)
+    Result: 84.347 ms (+/-2.792)
+
+Workload: 13_simd_vectorization\comparisons\image_blur.rs
+  Target: Rust release (rust_release)
+    Result: 10.311 ms (+/-0.329)
+
+Workload: 13_simd_vectorization\comparisons\mandelbrot_set.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 14.855 ms (+/-1.187)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 14.931 ms (+/-1.159)
+
+Workload: 13_simd_vectorization\comparisons\mandelbrot_set.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 15.292 ms (+/-0.545)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 15.298 ms (+/-1.150)
+
+Workload: 13_simd_vectorization\comparisons\mandelbrot_set.go
+  Target: Go release (go_release)
+
+Workload: 13_simd_vectorization\comparisons\mandelbrot_set.py
+  Target: CPython (python_cpython)
+    Result: 335.614 ms (+/-75.336)
+
+Workload: 13_simd_vectorization\comparisons\mandelbrot_set.rs
+  Target: Rust release (rust_release)
+    Result: 15.248 ms (+/-1.289)
+
+Workload: 13_simd_vectorization\comparisons\matrix_multiply.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 9.659 ms (+/-0.593)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 9.918 ms (+/-0.315)
+
+Workload: 13_simd_vectorization\comparisons\matrix_multiply.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 10.127 ms (+/-1.203)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 10.442 ms (+/-1.586)
+
+Workload: 13_simd_vectorization\comparisons\matrix_multiply.go
+  Target: Go release (go_release)
+
+Workload: 13_simd_vectorization\comparisons\matrix_multiply.py
+  Target: CPython (python_cpython)
+    Result: 68.761 ms (+/-2.167)
+
+Workload: 13_simd_vectorization\comparisons\matrix_multiply.rs
+  Target: Rust release (rust_release)
+    Result: 10.810 ms (+/-0.372)
+
+Workload: 13_simd_vectorization\comparisons\nbody_simulation.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.239 ms (+/-0.526)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 12.632 ms (+/-1.181)
+
+Workload: 13_simd_vectorization\comparisons\nbody_simulation.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 12.825 ms (+/-0.579)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 12.525 ms (+/-0.799)
+
+Workload: 13_simd_vectorization\comparisons\nbody_simulation.go
+  Target: Go release (go_release)
+
+Workload: 13_simd_vectorization\comparisons\nbody_simulation.py
+  Target: CPython (python_cpython)
+    Result: 261.484 ms (+/-8.164)
+
+Workload: 13_simd_vectorization\comparisons\nbody_simulation.rs
+  Target: Rust release (rust_release)
+    Result: 12.999 ms (+/-1.164)
+
+Workload: 13_simd_vectorization\dot_product.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.183 ms (+/-1.158)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.126 ms (+/-1.350)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.222 ms (+/-0.294)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.609 ms (+/-0.265)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 206.787 ms (+/-12.847)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 202.414 ms (+/-2.299)
+
+Workload: 13_simd_vectorization\image_blur.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.274 ms (+/-0.375)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 10.528 ms (+/-1.038)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 10.069 ms (+/-0.285)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 10.028 ms (+/-1.131)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 213.931 ms (+/-7.782)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 212.408 ms (+/-4.554)
+
+Workload: 13_simd_vectorization\mandelbrot_set.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 15.216 ms (+/-1.013)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 15.442 ms (+/-1.318)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 15.584 ms (+/-1.064)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 14.473 ms (+/-0.443)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 213.372 ms (+/-7.049)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 211.757 ms (+/-6.199)
+
+Workload: 13_simd_vectorization\matrix_multiply.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 10.327 ms (+/-0.274)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 9.876 ms (+/-0.459)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 9.952 ms (+/-0.356)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 9.705 ms (+/-0.535)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 205.500 ms (+/-4.448)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 203.650 ms (+/-8.049)
+
+Workload: 13_simd_vectorization\nbody_simulation.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 13.129 ms (+/-0.477)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 12.964 ms (+/-0.472)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 12.796 ms (+/-1.187)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.320 ms (+/-2.014)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 214.905 ms (+/-4.215)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 221.077 ms (+/-9.281)
+
+Workload: 14_string_processing\base64_encode.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 14.281 ms (+/-0.558)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 13.415 ms (+/-0.485)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 14.194 ms (+/-0.528)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.848 ms (+/-0.431)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 210.768 ms (+/-4.619)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 210.433 ms (+/-4.183)
+
+Workload: 14_string_processing\comparisons\base64_encode.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 13.608 ms (+/-1.917)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.906 ms (+/-0.257)
+
+Workload: 14_string_processing\comparisons\base64_encode.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.648 ms (+/-0.460)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 13.467 ms (+/-0.732)
+
+Workload: 14_string_processing\comparisons\base64_encode.go
+  Target: Go release (go_release)
+
+Workload: 14_string_processing\comparisons\base64_encode.py
+  Target: CPython (python_cpython)
+    Result: 204.282 ms (+/-11.782)
+
+Workload: 14_string_processing\comparisons\base64_encode.rs
+  Target: Rust release (rust_release)
+    Result: 13.223 ms (+/-0.488)
+
+Workload: 14_string_processing\comparisons\html_escape.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.984 ms (+/-0.555)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 13.127 ms (+/-1.442)
+
+Workload: 14_string_processing\comparisons\html_escape.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 13.240 ms (+/-0.504)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 13.154 ms (+/-0.505)
+
+Workload: 14_string_processing\comparisons\html_escape.go
+  Target: Go release (go_release)
+
+Workload: 14_string_processing\comparisons\html_escape.py
+  Target: CPython (python_cpython)
+    Result: 192.169 ms (+/-3.599)
+
+Workload: 14_string_processing\comparisons\html_escape.rs
+  Target: Rust release (rust_release)
+    Result: 13.902 ms (+/-0.986)
+
+Workload: 14_string_processing\comparisons\json_parse.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 11.638 ms (+/-1.872)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 11.932 ms (+/-0.290)
+
+Workload: 14_string_processing\comparisons\json_parse.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.449 ms (+/-0.489)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.278 ms (+/-1.301)
+
+Workload: 14_string_processing\comparisons\json_parse.go
+  Target: Go release (go_release)
+
+Workload: 14_string_processing\comparisons\json_parse.py
+  Target: CPython (python_cpython)
+    Result: 143.505 ms (+/-4.002)
+
+Workload: 14_string_processing\comparisons\json_parse.rs
+  Target: Rust release (rust_release)
+    Result: 13.774 ms (+/-3.936)
+
+Workload: 14_string_processing\comparisons\regex_match.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 12.036 ms (+/-1.309)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 10.864 ms (+/-0.396)
+
+Workload: 14_string_processing\comparisons\regex_match.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 11.165 ms (+/-0.534)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 11.203 ms (+/-1.139)
+
+Workload: 14_string_processing\comparisons\regex_match.go
+  Target: Go release (go_release)
+
+Workload: 14_string_processing\comparisons\regex_match.py
+  Target: CPython (python_cpython)
+    Result: 127.507 ms (+/-9.530)
+
+Workload: 14_string_processing\comparisons\regex_match.rs
+  Target: Rust release (rust_release)
+    Result: 11.050 ms (+/-0.905)
+
+Workload: 14_string_processing\html_escape.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 13.445 ms (+/-1.083)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 14.107 ms (+/-1.752)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 13.381 ms (+/-0.426)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 13.305 ms (+/-0.539)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 213.516 ms (+/-5.069)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 211.723 ms (+/-7.526)
+
+Workload: 14_string_processing\json_parse.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.635 ms (+/-0.316)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.664 ms (+/-1.009)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 11.046 ms (+/-0.571)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.676 ms (+/-0.461)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 219.296 ms (+/-5.372)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 217.182 ms (+/-4.169)
+
+Workload: 14_string_processing\regex_match.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 11.166 ms (+/-1.081)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 11.055 ms (+/-1.186)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 14.235 ms (+/-1.855)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 11.154 ms (+/-0.574)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 212.502 ms (+/-4.233)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 213.163 ms (+/-3.169)
+
+Results written to: C:\Users\ksvik\Projects\Agam-Lang\benchmarks\results\raw\2026-05-14_12-57-41
+
+Skipped targets:
+  GCC 16 C O3 (c_gcc_16_o3): 47 workload(s), missing gcc
+  GCC 16 C++ O3 (cpp_gcc_16_o3): 47 workload(s), missing g++
+  Go release (go_release): 47 workload(s), missing go
+  CPython (python_cpython): 4 workload(s), missing missing Python modules: cupy
+  CPython (python_cpython): 1 workload(s), missing missing Python modules: numba
+  CPython (python_cpython): 4 workload(s), missing missing Python modules: tensorflow
+  CPython (python_cpython): 5 workload(s), missing missing Python modules: torch

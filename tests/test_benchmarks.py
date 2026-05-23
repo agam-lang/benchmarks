@@ -17,6 +17,8 @@ from infrastructure.utils import (
     load_environments,
     load_targets,
 )
+from harness.base_harness import PreparedBenchmark
+from run_benchmarks import skip_entry_for
 
 
 class WorkspaceShapeTests(unittest.TestCase):
@@ -35,10 +37,17 @@ class WorkspaceShapeTests(unittest.TestCase):
         "01_algorithms",
         "02_numerical_computation",
         "03_data_structures",
+        "04_compression_kernels",
         "05_ml_primitives",
         "06_gpu_compute",
+        "07_cryptography_kernels",
+        "08_media_encoding_kernels",
         "09_compilation_metrics",
         "10_compiler_pipeline",
+        "11_ray_tracing",
+        "12_game_ai",
+        "13_simd_vectorization",
+        "14_string_processing",
     ]
 
     def test_all_suite_directories_exist(self) -> None:
@@ -62,20 +71,18 @@ class BenchmarkDiscoveryTests(unittest.TestCase):
 
     def test_discovers_agam_sources(self) -> None:
         agam_sources = discover_benchmarks(language_filters={"agam"})
-        # 5 algorithms + 5 numerical + 4 data_structures + 4 ml_primitives + 4 compilation = 22+
-        self.assertGreaterEqual(len(agam_sources), 22)
+        self.assertGreaterEqual(len(agam_sources), 80)
 
     def test_discovers_comparison_sources(self) -> None:
         comparison_sources = [
             p for p in discover_benchmarks(include_comparisons=True)
             if "comparisons" in p.parts
         ]
-        # 25 + 25 + 20 + 20 = 90+
-        self.assertGreaterEqual(len(comparison_sources), 90)
+        self.assertGreaterEqual(len(comparison_sources), 235)
 
     def test_discovers_all_sources(self) -> None:
         all_sources = discover_benchmarks(include_comparisons=True)
-        self.assertGreaterEqual(len(all_sources), 110)
+        self.assertGreaterEqual(len(all_sources), 332)
 
     def test_suite_filter_works(self) -> None:
         sources = discover_benchmarks(
@@ -95,6 +102,11 @@ class BenchmarkDiscoveryTests(unittest.TestCase):
         sources = discover_benchmarks()
         for path in sources:
             self.assertNotIn("comparisons", path.parts)
+
+    def test_excludes_hidden_generated_paths(self) -> None:
+        sources = discover_benchmarks(include_comparisons=True)
+        for path in sources:
+            self.assertNotIn(".agam_cache", path.parts)
 
 
 class CrossLanguageCoverageTests(unittest.TestCase):
@@ -152,11 +164,24 @@ class ConfigTests(unittest.TestCase):
     def test_targets_config_loads(self) -> None:
         targets = load_targets()
         self.assertIn("targets", targets)
-        self.assertEqual(len(targets["targets"]), 11)
+        self.assertEqual(len(targets["targets"]), 15)
+
+    def test_compiler_family_targets_use_distinct_environment_keys(self) -> None:
+        targets = load_targets()["targets"]
+        self.assertEqual(targets["c_clang_o3"]["compiler_key"], "clang_c_compiler")
+        self.assertEqual(targets["cpp_clangxx_o3"]["compiler_key"], "clang_cpp_compiler")
+        self.assertEqual(targets["c_gcc_16_o3"]["compiler_key"], "gcc_c_compiler")
+        self.assertEqual(targets["cpp_gcc_16_o3"]["compiler_key"], "gcc_cpp_compiler")
+        self.assertEqual(targets["c_clang_22_o3"]["compiler_key"], "clang22_c_compiler")
+        self.assertEqual(targets["cpp_clang_22_o3"]["compiler_key"], "clang22_cpp_compiler")
 
     def test_environments_config_loads(self) -> None:
         envs = load_environments()
         self.assertIn("environments", envs)
+        windows = envs["environments"]["local_windows_win11"]
+        self.assertIn("clang_c_compiler", windows)
+        self.assertIn("gcc_c_compiler", windows)
+        self.assertIn("clang22_c_compiler", windows)
 
     def test_gpu_targets_config_loads(self) -> None:
         import json
@@ -165,6 +190,29 @@ class ConfigTests(unittest.TestCase):
         self.assertIn("targets", data)
         self.assertIn("gpu_defaults", data)
         self.assertEqual(len(data["targets"]), 8)
+
+
+class RunnerTests(unittest.TestCase):
+    """Verify top-level runner helpers keep reporting stable."""
+
+    def test_skip_entry_includes_target_id(self) -> None:
+        prepared = PreparedBenchmark(
+            target_id="python_cpython",
+            target_name="CPython",
+            language="python",
+            backend=None,
+            compiler=None,
+            call_cache_enabled=False,
+            compile_command=None,
+            run_command=["python", "example.py"],
+        )
+
+        entry = skip_entry_for(prepared, "go")
+
+        self.assertEqual(entry["target_id"], "python_cpython")
+        self.assertEqual(entry["name"], "CPython")
+        self.assertEqual(entry["command"], "go")
+        self.assertEqual(entry["count"], 0)
 
 
 class CompilationMetricsTests(unittest.TestCase):

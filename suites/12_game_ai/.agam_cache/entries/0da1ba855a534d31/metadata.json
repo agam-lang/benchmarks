@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "0da1ba855a534d31",
+  "key": {
+    "source_hash": "31109fc5dc409450",
+    "semantic_hash": "c28f320c2dd0f903",
+    "backend": "Jit",
+    "opt_level": 0,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "ProfileJson",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\12_game_ai\\minimax_search.agam",
+  "artifact_name": "minimax_search.jit_profile.json",
+  "bytes": 4398,
+  "created_unix_ms": 1778760266078,
+  "last_used_unix_ms": 1778760266078
+}

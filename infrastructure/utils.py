@@ -20,6 +20,7 @@ except ImportError:  # pragma: no cover - optional dependency
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+WORKSPACE_ROOT = REPO_ROOT.parent
 SUITE_ROOT = REPO_ROOT / "suites"
 RESULT_ROOT = REPO_ROOT / "results"
 CONFIG_ROOT = REPO_ROOT / "config"
@@ -128,12 +129,15 @@ def discover_benchmarks(
     for path in sorted(SUITE_ROOT.rglob("*")):
         if not path.is_file():
             continue
+        relative_parts = path.relative_to(SUITE_ROOT).parts
+        if any(part.startswith(".") for part in relative_parts):
+            continue
         language = SOURCE_SUFFIX_TO_LANGUAGE.get(path.suffix)
         if language is None:
             continue
         if not include_comparisons and "comparisons" in path.parts:
             continue
-        suite_name = path.relative_to(SUITE_ROOT).parts[0]
+        suite_name = relative_parts[0]
         if suite_filter_set and suite_name not in suite_filter_set:
             continue
         if language_filters and language not in language_filters:
@@ -205,11 +209,34 @@ def resolve_command_path(command: str | None) -> Path | None:
     """Resolve a command name to an absolute path on this system."""
     if not command:
         return None
+    candidate = Path(command)
+    if candidate.is_file():
+        return candidate.resolve()
     resolved = shutil.which(command)
     if resolved:
         return Path(resolved)
     fallback = _resolve_windows_vs_llvm_tool(command)
     return fallback
+
+
+def resolve_agam_driver(command: str | None = "agamc") -> Path | None:
+    """Resolve ``agamc`` from PATH or the sibling compiler workspace."""
+    override = os.environ.get("AGAMC_PATH")
+    if override:
+        resolved_override = resolve_command_path(override)
+        if resolved_override:
+            return resolved_override
+
+    resolved = resolve_command_path(command)
+    if resolved:
+        return resolved
+
+    executable = "agamc.exe" if os.name == "nt" else "agamc"
+    for profile in ("release", "debug"):
+        candidate = WORKSPACE_ROOT / "agam" / "target" / profile / executable
+        if candidate.is_file():
+            return candidate.resolve()
+    return None
 
 
 def _resolve_windows_vs_llvm_tool(command: str) -> Path | None:

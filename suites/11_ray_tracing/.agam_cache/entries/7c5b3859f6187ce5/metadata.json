@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "7c5b3859f6187ce5",
+  "key": {
+    "source_hash": "950a2d23f1e6cc8e",
+    "semantic_hash": "4c0b7edf10ba4a1d",
+    "backend": "C",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
+  },
+  "artifact_kind": "CSource",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\11_ray_tracing\\bvh_traversal.agam",
+  "artifact_name": "agam_c_o3_call_cache_off.c",
+  "bytes": 24330,
+  "created_unix_ms": 1778758869414,
+  "last_used_unix_ms": 1778760202260
+}

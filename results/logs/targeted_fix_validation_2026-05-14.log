@@ -1,0 +1,64 @@
+Running 7 benchmark sources on local_windows_win11...
+
+Workload: 10_compiler_pipeline\control_flow\if_else_chains.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    [!] Compilation failed: [1;31merror[0m: expected expression, found Else [1;31merror[0m: expected expression, found LBrace [1;31merror[0m: expected expression, found Else [1;31merror[0m: expected expression, found LBrace [1;31merror[0m: expected expressio
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    [!] Compilation failed: [1;31merror[0m: expected expression, found Else [1;31merror[0m: expected expression, found LBrace [1;31merror[0m: expected expression, found Else [1;31merror[0m: expected expression, found LBrace [1;31merror[0m: expected expressio
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 4023.171 ms (+/-0.000)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 1455.161 ms (+/-0.000)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    [!] Execution failed: Non-zero exit code: 1
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    [!] Execution failed: Non-zero exit code: 1
+
+Workload: 11_ray_tracing\bvh_traversal.agam
+  Target: Agam LLVM O3 (agam_llvm_o3_call_cache_off)
+    Result: 177.360 ms (+/-0.000)
+  Target: Agam LLVM O3 + Call Cache (agam_llvm_o3_call_cache_on)
+    Result: 186.528 ms (+/-0.000)
+  Target: Agam C O3 (agam_c_o3_call_cache_off)
+    Result: 1439.722 ms (+/-0.000)
+  Target: Agam C O3 + Call Cache (agam_c_o3_call_cache_on)
+    Result: 1237.025 ms (+/-0.000)
+  Target: Agam JIT O2 (agam_jit_o2_call_cache_off)
+    Result: 397.355 ms (+/-0.000)
+  Target: Agam JIT O2 + Call Cache (agam_jit_o2_call_cache_on)
+    Result: 375.935 ms (+/-0.000)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.c
+  Target: Clang C O3 (c_clang_o3)
+    Result: 1291.725 ms (+/-0.000)
+  Target: GCC 16 C O3 (c_gcc_16_o3)
+    [-] Skipping target: missing tool 'gcc'
+  Target: Clang 22 C O3 (c_clang_22_o3)
+    Result: 1258.881 ms (+/-0.000)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.cpp
+  Target: Clang++ O3 (cpp_clangxx_o3)
+    Result: 1762.114 ms (+/-0.000)
+  Target: GCC 16 C++ O3 (cpp_gcc_16_o3)
+    [-] Skipping target: missing tool 'g++'
+  Target: Clang 22 C++ O3 (cpp_clang_22_o3)
+    Result: 2014.792 ms (+/-0.000)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.go
+  Target: Go release (go_release)
+    [-] Skipping target: missing tool 'go'
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.py
+  Target: CPython (python_cpython)
+    Result: 32.486 ms (+/-0.000)
+
+Workload: 11_ray_tracing\comparisons\bvh_traversal.rs
+  Target: Rust release (rust_release)
+    Result: 1940.427 ms (+/-0.000)
+
+Results written to: C:\Users\ksvik\Projects\Agam-Lang\benchmarks\results\raw\2026-05-14_13-50-54
+
+Skipped targets:
+  GCC 16 C O3 (c_gcc_16_o3): 1 workload(s), missing gcc
+  GCC 16 C++ O3 (cpp_gcc_16_o3): 1 workload(s), missing g++
+  Go release (go_release): 1 workload(s), missing go

@@ -23,7 +23,7 @@ class GoHarness(BaseHarness):
         target_id: str,
         target_spec: dict[str, Any],
     ) -> PreparedBenchmark:
-        compiler_name = self.environment.get("go_compiler", "go")
+        compiler_name = self.environment.get("go_compiler", str(target_spec.get("compiler", "go")))
         compiler_path = resolve_command_path(compiler_name)
         compiler = str(compiler_path) if compiler_path else compiler_name
         binary = build_target.with_suffix(".exe" if os.name == "nt" else "")

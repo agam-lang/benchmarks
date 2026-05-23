@@ -8,7 +8,7 @@
     "coefficient_of_variation_warning_percent": 10.0,
     "capture_memory": true,
     "capture_compilation_metrics": true,
-    "include_comparisons": false,
+    "include_comparisons": true,
     "default_targets": [
       "agam_llvm_o3_call_cache_off",
       "agam_llvm_o3_call_cache_on",
@@ -19,6 +19,10 @@
       "rust_release",
       "c_clang_o3",
       "cpp_clangxx_o3",
+      "c_gcc_16_o3",
+      "cpp_gcc_16_o3",
+      "c_clang_22_o3",
+      "cpp_clang_22_o3",
       "python_cpython",
       "go_release"
     ]

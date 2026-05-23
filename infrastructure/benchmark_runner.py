@@ -46,21 +46,55 @@ def _run_subprocess(
 
 
 def compile_benchmark(
-    compile_command: list[str] | None,
+    compile_command: list[str] | list[list[str]] | None,
     *,
     timeout: float = 60.0,
 ) -> dict[str, Any] | None:
     """Compile a benchmark source. Returns compile metadata or None if no compile step."""
     if not compile_command:
         return None
-    rc, stdout, stderr, elapsed_ns = _run_subprocess(compile_command, timeout=timeout)
+    commands = compile_command if isinstance(compile_command[0], list) else [compile_command]
+    total_elapsed_ns = 0.0
+    stdout_previews: list[str] = []
+    stderr_previews: list[str] = []
+    step_results: list[dict[str, Any]] = []
+
+    for command in commands:
+        rc, stdout, stderr, elapsed_ns = _run_subprocess(command, timeout=timeout)
+        total_elapsed_ns += elapsed_ns
+        stdout_preview = sanitize_preview(stdout)
+        stderr_preview = sanitize_preview(stderr)
+        stdout_previews.append(stdout_preview)
+        stderr_previews.append(stderr_preview)
+        step_results.append(
+            {
+                "command": command,
+                "returncode": rc,
+                "elapsed_ns": elapsed_ns,
+                "stdout_preview": stdout_preview,
+                "stderr_preview": stderr_preview,
+                "success": rc == 0,
+            }
+        )
+        if rc != 0:
+            return {
+                "command": commands if len(commands) > 1 else commands[0],
+                "returncode": rc,
+                "elapsed_ns": total_elapsed_ns,
+                "stdout_preview": sanitize_preview(" ".join(filter(None, stdout_previews))),
+                "stderr_preview": sanitize_preview(" ".join(filter(None, stderr_previews))),
+                "success": False,
+                "steps": step_results,
+            }
+
     return {
-        "command": compile_command,
-        "returncode": rc,
-        "elapsed_ns": elapsed_ns,
-        "stdout_preview": sanitize_preview(stdout),
-        "stderr_preview": sanitize_preview(stderr),
-        "success": rc == 0,
+        "command": commands if len(commands) > 1 else commands[0],
+        "returncode": 0,
+        "elapsed_ns": total_elapsed_ns,
+        "stdout_preview": sanitize_preview(" ".join(filter(None, stdout_previews))),
+        "stderr_preview": sanitize_preview(" ".join(filter(None, stderr_previews))),
+        "success": True,
+        "steps": step_results,
     }
 
 
