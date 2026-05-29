@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 import unittest
 from pathlib import Path
@@ -109,7 +110,8 @@ class AgamHarnessTests(unittest.TestCase):
 
         self.assertEqual(prepared.compiler, str(resolved_driver))
         self.assertEqual(prepared.compile_command[0], str(resolved_driver))
-        self.assertEqual(prepared.run_command, [str(Path("build/sample.exe"))])
+        binary = "build/sample.exe" if os.name == "nt" else "build/sample"
+        self.assertEqual(prepared.run_command, [str(Path(binary))])
 
     @patch("harness.agam_harness.resolve_command_path")
     @patch("harness.agam_harness.resolve_agam_driver")
@@ -135,8 +137,12 @@ class AgamHarnessTests(unittest.TestCase):
         self.assertIsInstance(prepared.compile_command[0], list)
         self.assertIn(prepared.compile_command[0][0], {str(resolved_driver), "pwsh"})
         self.assertEqual(prepared.compile_command[1][0], str(resolved_clang))
-        self.assertIn("-D_CRT_SECURE_NO_WARNINGS", prepared.compile_command[1])
-        self.assertEqual(prepared.run_command, [str(Path("build/sample.exe"))])
+        if os.name == "nt":
+            self.assertIn("-D_CRT_SECURE_NO_WARNINGS", prepared.compile_command[1])
+        else:
+            self.assertIn("-lm", prepared.compile_command[1])
+        binary = "build/sample.exe" if os.name == "nt" else "build/sample"
+        self.assertEqual(prepared.run_command, [str(Path(binary))])
 
 
 class PythonHarnessTests(unittest.TestCase):
