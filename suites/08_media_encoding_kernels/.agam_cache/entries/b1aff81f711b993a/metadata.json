@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "b1aff81f711b993a",
+  "key": {
+    "source_hash": "77532ed63cff161a",
+    "semantic_hash": "0b737dcf987a8c72",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "linux",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "/mnt/c/Users/ksvik/Projects/Agam-Lang/benchmarks/suites/08_media_encoding_kernels/video_kvazaar.agam",
+  "artifact_name": "video_kvazaar.out",
+  "bytes": 19432,
+  "created_unix_ms": 1787503528504,
+  "last_used_unix_ms": 1787503601820
+}

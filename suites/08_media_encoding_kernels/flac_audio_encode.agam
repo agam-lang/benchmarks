@@ -1,28 +1,36 @@
 @lang.advance
 
-fn i64_const(value: i64) -> i64 { return value; }
+fn i64_const(value: i64) -> i64 {
+    return value;
+}
 
-fn lpc_residual_encode(num_samples: i64, order: i64) -> i64 {
-    let mut residual_energy: i64 = i64_const(0);
-    let mut i: i64 = order;
-    while i < num_samples {
-        let sample: i64 = ((i * i64_const(1103515245) + i64_const(12345)) % i64_const(32768)) - i64_const(16384);
-        let mut predicted: i64 = i64_const(0);
-        let mut k: i64 = i64_const(0);
-        while k < order {
-            let prev_sample: i64 = (((i - i64_const(1) - k) * i64_const(1103515245) + i64_const(12345)) % i64_const(32768)) - i64_const(16384);
-            predicted = predicted + prev_sample / (k + i64_const(2));
-            k = k + i64_const(1);
+fn flac_lpc_encode(samples: i64) -> i64 {
+    let zero: i64 = i64_const(0);
+    let one: i64 = i64_const(1);
+    let lcg_mult: i64 = i64_const(1103515245);
+    let lcg_add: i64 = i64_const(12345);
+    let mod_amp: i64 = i64_const(32768);
+    let mod_prime: i64 = i64_const(1000000007);
+
+    let mut residual_sum: i64 = zero;
+    let mut prev: i64 = zero;
+    let mut i: i64 = zero;
+    while i < samples {
+        let sample: i64 = ((i * lcg_mult) + lcg_add) % mod_amp;
+        let predicted: i64 = prev;
+        let mut residual: i64 = sample - predicted;
+        if residual < zero {
+            residual = zero - residual;
         }
-        let diff = sample - predicted;
-        residual_energy = residual_energy + (if diff >= i64_const(0) { diff } else { -diff });
-        i = i + i64_const(1);
+        residual_sum = (residual_sum + residual) % mod_prime;
+        prev = sample;
+        i = i + one;
     }
-    return residual_energy;
+    return residual_sum;
 }
 
 fn main() -> i32 {
-    let energy = lpc_residual_encode(i64_const(32768), i64_const(8));
-    print_int(energy);
+    let res: i64 = flac_lpc_encode(i64_const(100000));
+    print_int(res);
     return 0;
 }

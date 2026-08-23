@@ -1,42 +1,60 @@
 @lang.advance
 
-fn i64_const(value: i64) -> i64 { return value; }
+fn i64_const(value: i64) -> i64 {
+    return value;
+}
 
-fn predict_spatial_residual(width: i64, height: i64, quality: i64) -> i64 {
-    let mut total_residual: i64 = i64_const(0);
-    let mut y: i64 = i64_const(1);
-    while y < height {
-        let mut x: i64 = i64_const(1);
-        while x < width {
-            let curr: i64 = ((y * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let top: i64 = (((y - i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let left: i64 = ((y * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let top_left: i64 = (((y - i64_const(1)) * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+fn paeth_predictor(a: i64, b: i64, c: i64) -> i64 {
+    let p: i64 = a + b - c;
+    let mut pa: i64 = p - a;
+    if pa < i64_const(0) { pa = i64_const(0) - pa; }
+    let mut pb: i64 = p - b;
+    if pb < i64_const(0) { pb = i64_const(0) - pb; }
+    let mut pc: i64 = p - c;
+    if pc < i64_const(0) { pc = i64_const(0) - pc; }
 
-            let p: i64 = left + top - top_left;
-            let pa: i64 = if p > left { p - left } else { left - p };
-            let pb: i64 = if p > top { p - top } else { top - p };
-            let pc: i64 = if p > top_left { p - top_left } else { top_left - p };
-
-            let pred: i64 = if pa <= pb && pa <= pc {
-                left
-            } else if pb <= pc {
-                top
-            } else {
-                top_left
-            };
-
-            let residual: i64 = (curr - pred) * quality / i64_const(100);
-            total_residual = total_residual + (if residual >= i64_const(0) { residual } else { -residual });
-            x = x + i64_const(1);
-        }
-        y = y + i64_const(1);
+    if pa <= pb && pa <= pc {
+        return a;
     }
-    return total_residual;
+    if pb <= pc {
+        return b;
+    }
+    return c;
+}
+
+fn webp_encode(width: i64, height: i64) -> i64 {
+    let zero: i64 = i64_const(0);
+    let one: i64 = i64_const(1);
+    let seventeen: i64 = i64_const(17);
+    let twenty_three: i64 = i64_const(23);
+    let mod_byte: i64 = i64_const(256);
+    let mod_prime: i64 = i64_const(1000000007);
+
+    let mut residual_sum: i64 = zero;
+    let mut y: i64 = one;
+    while y < height {
+        let mut x: i64 = one;
+        while x < width {
+            let left: i64 = (((x - one) * seventeen) + (y * twenty_three)) % mod_byte;
+            let top: i64 = ((x * seventeen) + ((y - one) * twenty_three)) % mod_byte;
+            let top_left: i64 = (((x - one) * seventeen) + ((y - one) * twenty_three)) % mod_byte;
+            let current: i64 = ((x * seventeen) + (y * twenty_three)) % mod_byte;
+
+            let predicted: i64 = paeth_predictor(left, top, top_left);
+            let mut diff: i64 = current - predicted;
+            if diff < zero {
+                diff = zero - diff;
+            }
+            residual_sum = (residual_sum + diff) % mod_prime;
+            x = x + one;
+        }
+        y = y + one;
+    }
+    return residual_sum;
 }
 
 fn main() -> i32 {
-    let res = predict_spatial_residual(i64_const(256), i64_const(256), i64_const(100));
+    let res: i64 = webp_encode(i64_const(512), i64_const(512));
     print_int(res);
     return 0;
 }

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "cb70643e3f5bdd2b",
+  "key": {
+    "source_hash": "338dd360b4f2a6c9",
+    "semantic_hash": "81bf7a3b8ad90669",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "linux",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "/mnt/c/Users/ksvik/Projects/Agam-Lang/benchmarks/suites/11_ray_tracing/c_ray_4k.agam",
+  "artifact_name": "c_ray.out",
+  "bytes": 19832,
+  "created_unix_ms": 1787503481882,
+  "last_used_unix_ms": 1787503610491
+}

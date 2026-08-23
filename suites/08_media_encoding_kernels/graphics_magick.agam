@@ -1,33 +1,42 @@
 @lang.advance
 
-fn i64_const(value: i64) -> i64 { return value; }
+fn i64_const(value: i64) -> i64 {
+    return value;
+}
 
-fn graphics_magick_pipeline(width: i64, height: i64) -> i64 {
-    let mut accumulator: i64 = i64_const(0);
-    let mut y: i64 = i64_const(1);
-    while y < height - i64_const(1) {
-        let mut x: i64 = i64_const(1);
-        while x < width - i64_const(1) {
-            let center: i64 = ((y * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let top: i64 = (((y - i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let bottom: i64 = (((y + i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let left: i64 = ((y * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
-            let right: i64 = ((y * width + (x + i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+fn graphics_magick_filter(dim: i64) -> i64 {
+    let zero: i64 = i64_const(0);
+    let one: i64 = i64_const(1);
+    let four: i64 = i64_const(4);
+    let thirty_one: i64 = i64_const(31);
+    let mod_byte: i64 = i64_const(256);
+    let mod_prime: i64 = i64_const(1000000007);
 
-            let sharpened = center * i64_const(5) - top - bottom - left - right;
-            let noise = ((x * i64_const(13) + y * i64_const(37)) % i64_const(31)) - i64_const(15);
-            let filtered = (sharpened + noise) % i64_const(256);
+    let mut checksum: i64 = zero;
+    let mut y: i64 = one;
+    while y < dim - one {
+        let mut x: i64 = one;
+        while x < dim - one {
+            let center: i64 = (x * y * thirty_one) % mod_byte;
+            let top: i64 = (x * (y - one) * thirty_one) % mod_byte;
+            let bottom: i64 = (x * (y + one) * thirty_one) % mod_byte;
+            let left: i64 = ((x - one) * y * thirty_one) % mod_byte;
+            let right: i64 = ((x + one) * y * thirty_one) % mod_byte;
 
-            accumulator = accumulator + (if filtered >= i64_const(0) { filtered } else { -filtered });
-            x = x + i64_const(1);
+            let mut laplacian: i64 = (center * four) - top - bottom - left - right;
+            if laplacian < zero {
+                laplacian = zero - laplacian;
+            }
+            checksum = (checksum + laplacian) % mod_prime;
+            x = x + one;
         }
-        y = y + i64_const(1);
+        y = y + one;
     }
-    return accumulator;
+    return checksum;
 }
 
 fn main() -> i32 {
-    let result = graphics_magick_pipeline(i64_const(256), i64_const(256));
-    print_int(result);
+    let res: i64 = graphics_magick_filter(i64_const(512));
+    print_int(res);
     return 0;
 }

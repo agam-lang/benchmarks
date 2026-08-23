@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "7c8c38d37bc2df2b",
+  "key": {
+    "source_hash": "f258a46e74e3df02",
+    "semantic_hash": "099fe3bbd7663eff",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "linux",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "/mnt/c/Users/ksvik/Projects/Agam-Lang/benchmarks/suites/03_data_structures/valkey_kv_store.agam",
+  "artifact_name": "agam_aot_valkey_kv_store.out",
+  "bytes": 19400,
+  "created_unix_ms": 1787503591124,
+  "last_used_unix_ms": 1787503591124
+}

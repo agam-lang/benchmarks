@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "e7d2afcdfc4d54a6",
+  "key": {
+    "source_hash": "06474174451d9320",
+    "semantic_hash": "8e382b02256f749c",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "linux",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=native;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "NativeBinary",
+  "source_path": "/mnt/c/Users/ksvik/Projects/Agam-Lang/benchmarks/suites/01_algorithms/fibonacci.agam",
+  "artifact_name": "agam_aot_fibonacci.out",
+  "bytes": 24648,
+  "created_unix_ms": 1787503554836,
+  "last_used_unix_ms": 1787503554836
+}

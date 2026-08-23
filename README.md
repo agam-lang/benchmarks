@@ -46,25 +46,28 @@ Execution Latency Comparison (Lower is Faster):
 
 ## 📊 Comprehensive Multi-Compiler Performance Matrix
 
-*Measured live on hardware on high-performance plugged-in mode:*
+*Measured natively in Linux under high-performance plugged-in mode:*
 
-| Benchmark Kernel | **Agam Native JIT** ⚡ | **Agam LLVM AOT** 💾 | **GCC 15 (`-O3`)** 🐧 | **Clang++ 21 (`-O3`)** ⚙️ | **Rustc (`-O`)** 🦀 | **CPython 3.14** 🐍 |
+| Benchmark Kernel | **Agam Native JIT** ⚡ | **Agam LLVM AOT** 💾 | **GCC 15 (`-O3`)** 🐧 | **Clang++ 21 (`-O3`)** ⚙️ | **Rustc 1.93 (`-O`)** 🦀 | **CPython 3.14** 🐍 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **`video_kvazaar`** (HEVC Intra) | **0.08 ms** 🥇 | **0.08 ms** 🥇 | — | — | 14.82 ms | 1,412.66 ms (16,794x) |
-| **`flac_audio_encode`** (LPC) | **0.07 ms** 🥇 | **0.07 ms** 🥇 | — | — | 9.87 ms | 68.41 ms (934x) |
-| **`graphics_magick`** (Sharpen)| **0.09 ms** 🥇 | **0.09 ms** 🥇 | — | — | 10.61 ms | 64.30 ms (689x) |
-| **`webp_encode`** (Paeth) | **0.11 ms** 🥇 | **0.11 ms** 🥇 | — | — | 10.49 ms | 66.30 ms (539x) |
-| **`c_ray_4k`** (Ray Tracing) | **0.06 ms** 🥇 | **0.06 ms** 🥇 | — | — | 9.72 ms | 139.33 ms (2,042x) |
-| **`dot_product`** (SIMD) | **0.43 ms** 🥇 | **0.75 ms** | **0.77 ms** | 1.30 ms | 10.77 ms | 40.56 ms (93.6x) |
-| **`binary_search`** (Logarithmic) | **0.42 ms** 🥇 | **0.69 ms** | **0.72 ms** | 1.23 ms | 9.71 ms | 29.91 ms (71.0x) |
-| **`quicksort`** (Partition) | **0.65 ms** 🥇 | 3.18 ms | **0.79 ms** | 1.58 ms | 9.95 ms | 36.07 ms (55.8x) |
-| **`matrix_multiply`** (GEMM) | 1.24 ms | 1.11 ms | **0.83 ms** 🥇 | 1.56 ms | 10.60 ms | 73.46 ms (47.3x) |
-| **`image_blur`** (Convolution) | 1.56 ms | 1.26 ms | **1.10 ms** 🥇 | 1.70 ms | 10.07 ms | 88.81 ms (54.9x) |
-| **`nbody_simulation`** (Physics)| 7.42 ms | **4.45 ms** | **4.37 ms** 🥇 | 5.08 ms | 13.04 ms | 300.31 ms (39.3x) |
-| **`mandelbrot_set`** (Fractal) | 7.90 ms | **6.81 ms** 🥇 | 7.17 ms | 7.61 ms | 15.94 ms | 368.86 ms (44.8x) |
-| **`edit_distance`** (DP) | 13.32 ms | 12.35 ms | **10.54 ms** 🥇 | 11.62 ms | 19.59 ms | 890.37 ms (66.9x) |
-| **`fibonacci` ($n=32$)** | 14.82 ms | **0.83 ms** 🥇 | **4.07 ms** | 8.03 ms | 15.91 ms | 339.70 ms (22.9x) |
-| **`liquid_dsp_filter`** (FIR 32-tap)| 26.15 ms | 26.06 ms | **18.17 ms** 🥇 | 22.40 ms | **18.17 ms** 🥇 | 812.21 ms (31.1x) |
+| **`fibonacci` ($n=32$)** | 16.00 ms | **0.73 ms** 🥇 | 3.88 ms | 7.52 ms | 6.16 ms | 209.51 ms (287x) |
+| **`binary_search`** (Logarithmic) | **0.36 ms** 🥇 | 0.74 ms | 0.62 ms | 1.37 ms | 0.78 ms | 28.67 ms (79.6x) |
+| **`quicksort`** (Partitioning) | **0.61 ms** 🥇 | 3.10 ms | 0.67 ms | 1.36 ms | 0.91 ms | 31.38 ms (51.4x) |
+| **`dot_product`** (SIMD Vector) | **0.43 ms** 🥇 | 0.86 ms | 0.69 ms | 1.13 ms | 0.90 ms | 34.11 ms (79.3x) |
+| **`prime_sieve`** (Bit Sieve) | **1.32 ms** 🥇 | 7.38 ms | 1.67 ms | 2.37 ms | 1.56 ms | 38.07 ms (28.8x) |
+| **`ocudu_5g_phy`** (5G LDPC) | 0.92 ms | **0.66 ms** 🥇 | 1.10 ms | 1.14 ms | 0.83 ms | 34.55 ms (52.3x) |
+| **`c_ray_4k`** (Ray Tracing) | 0.90 ms | **0.71 ms** 🥇 | 1.16 ms | 1.25 ms | 0.75 ms | 109.24 ms (153.8x) |
+| **`video_kvazaar`** (HEVC Intra)| **0.57 ms** 🥇 | 0.80 ms | 1.40 ms | 1.53 ms | 3.81 ms | 905.13 ms (1,588x) |
+| **`valkey_kv_store`** (In-Memory KV)| 1.15 ms | **0.89 ms** 🥇 | 1.27 ms | 1.25 ms | 0.98 ms | 41.08 ms (46.1x) |
+| **`matrix_multiply`** (GEMM Tile) | 1.11 ms | 0.99 ms | **0.71 ms** 🥇 | 1.23 ms | 0.92 ms | 55.02 ms (49.5x) |
+| **`flac_audio_encode`** (LPC) | **0.73 ms** 🥇 | 1.02 ms | 1.43 ms | 1.43 ms | 1.05 ms | 46.76 ms (64.0x) |
+| **`image_blur`** (2D Convolution) | 1.53 ms | 1.13 ms | **0.86 ms** 🥇 | 1.33 ms | 0.97 ms | 63.18 ms (41.2x) |
+| **`graphics_magick`** (Filter) | 2.27 ms | 1.57 ms | 1.98 ms | 2.04 ms | **1.06 ms** 🥇 | 49.71 ms (21.9x) |
+| **`webp_encode`** (Paeth) | 2.13 ms | 41.86 ms | 1.97 ms | 1.79 ms | **0.95 ms** 🥇 | 48.35 ms (22.7x) |
+| **`nbody_simulation`** (Physics)| 7.26 ms | 4.09 ms | **3.94 ms** 🥇 | 4.47 ms | **3.94 ms** 🥇 | 212.62 ms (29.2x) |
+| **`mandelbrot_set`** (Fractal) | 7.78 ms | 6.66 ms | **6.58 ms** 🥇 | 7.10 ms | 6.76 ms | 244.79 ms (31.4x) |
+| **`edit_distance`** (DP) | 14.03 ms | 12.68 ms | **10.26 ms** 🥇 | 11.99 ms | 10.25 ms | 636.60 ms (45.3x) |
+| **`liquid_dsp_filter`** (FIR 32) | 25.92 ms | 29.03 ms | **2.52 ms** 🥇 | 3.26 ms | 6.31 ms | 453.43 ms (17.5x) |
 
 ---
 
