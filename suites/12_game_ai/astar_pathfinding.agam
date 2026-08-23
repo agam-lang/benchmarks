@@ -40,9 +40,7 @@ fn astar_pathfinding(grid_size: i64) -> i64 {
                         let ny: i64 = curr_y + dy;
                         
                         if nx >= i64_const(0) && nx < grid_size && ny >= i64_const(0) && ny < grid_size {
-                            let is_obstacle: i64 = ((nx * i64_const(31) + ny * i64_const(37)) % i64_const(100) < i64_const(20));
-                            
-                            if is_obstacle == i64_const(0) {
+                            if (nx * i64_const(31) + ny * i64_const(37)) % i64_const(100) >= i64_const(20) {
                                 let g: i64 = path_len + i64_const(10);
                                 if dx != i64_const(0) && dy != i64_const(0) { g = g + i64_const(4); } // diagonal cost ~i64_const(14)
                                 let h: i64 = (abs_val(nx - goal_x) + abs_val(ny - goal_y)) * i64_const(10);

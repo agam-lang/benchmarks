@@ -60,8 +60,7 @@ fn bvh_traversal(rays: i64) -> i64 {
             if tmax_y < tmax { tmax = tmax_y; }
             
             if tmax >= tmin && tmax > i64_const(0) {
-                let is_leaf: i64 = (current_node % i64_const(3) == i64_const(0));
-                if is_leaf != i64_const(0) {
+                if current_node % i64_const(3) == i64_const(0) {
                     hits = hits + i64_const(1);
                     stack_size = stack_size - i64_const(1);
                     if stack_size < i64_const(0) { steps = i64_const(999); }
