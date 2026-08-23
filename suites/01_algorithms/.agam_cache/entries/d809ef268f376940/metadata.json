@@ -13,9 +13,9 @@
     "feature_signature": "jit_profile_v1;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude="
   },
   "artifact_kind": "ProfileJson",
-  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\fibonacci.agam",
+  "source_path": "benchmarks\\suites\\01_algorithms\\fibonacci.agam",
   "artifact_name": "fibonacci.jit_profile.json",
-  "bytes": 1644,
-  "created_unix_ms": 1787481623002,
-  "last_used_unix_ms": 1787481623002
+  "bytes": 1646,
+  "created_unix_ms": 1787484969267,
+  "last_used_unix_ms": 1787484969267
 }

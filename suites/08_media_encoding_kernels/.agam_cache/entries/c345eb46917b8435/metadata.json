@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "c345eb46917b8435",
+  "key": {
+    "source_hash": "a47429d82da2cd76",
+    "semantic_hash": "c0b750ee98657685",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=false;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=missing;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "LlvmIr",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\08_media_encoding_kernels\\dct_transform.agam",
+  "artifact_name": "agam_llvm_o3_call_cache_off.ll",
+  "bytes": 41017,
+  "created_unix_ms": 1787484236451,
+  "last_used_unix_ms": 1787484236451
+}

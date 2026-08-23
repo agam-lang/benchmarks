@@ -1,0 +1,38 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn ldpc_decode_layer(length: i64, iterations: i64) -> i64 {
+    let mut syndrome_sum: i64 = i64_const(0);
+    let mut iter: i64 = i64_const(0);
+    while iter < iterations {
+        let mut i: i64 = i64_const(0);
+        while i < length - i64_const(4) {
+            let l0: i64 = ((i * i64_const(1664525) + i64_const(1013904223)) % i64_const(256)) - i64_const(128);
+            let l1: i64 = (((i + i64_const(1)) * i64_const(1664525) + i64_const(1013904223)) % i64_const(256)) - i64_const(128);
+            let l2: i64 = (((i + i64_const(2)) * i64_const(1664525) + i64_const(1013904223)) % i64_const(256)) - i64_const(128);
+            let l3: i64 = (((i + i64_const(3)) * i64_const(1664525) + i64_const(1013904223)) % i64_const(256)) - i64_const(128);
+
+            let a0 = if l0 >= i64_const(0) { l0 } else { -l0 };
+            let a1 = if l1 >= i64_const(0) { l1 } else { -l1 };
+            let a2 = if l2 >= i64_const(0) { l2 } else { -l2 };
+            let a3 = if l3 >= i64_const(0) { l3 } else { -l3 };
+
+            let min1 = if a0 < a1 { a0 } else { a1 };
+            let min2 = if a2 < a3 { a2 } else { a3 };
+            let check_val = if min1 < min2 { min1 } else { min2 };
+
+            let sign = if (l0 ^ l1 ^ l2 ^ l3) < i64_const(0) { i64_const(-1) } else { i64_const(1) };
+            syndrome_sum = syndrome_sum + check_val * sign;
+            i = i + i64_const(4);
+        }
+        iter = iter + i64_const(1);
+    }
+    return syndrome_sum;
+}
+
+fn main() -> i32 {
+    let pdsch_throughput = ldpc_decode_layer(i64_const(16384), i64_const(8));
+    print_int(pdsch_throughput);
+    return 0;
+}

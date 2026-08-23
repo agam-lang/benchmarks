@@ -15,7 +15,7 @@
   "artifact_kind": "ProfileJson",
   "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\prime_sieve.agam",
   "artifact_name": "prime_sieve.jit_profile.json",
-  "bytes": 1653,
-  "created_unix_ms": 1787481631069,
-  "last_used_unix_ms": 1787481631069
+  "bytes": 1654,
+  "created_unix_ms": 1787484152222,
+  "last_used_unix_ms": 1787484152222
 }

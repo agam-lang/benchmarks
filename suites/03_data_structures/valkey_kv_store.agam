@@ -1,0 +1,45 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn valkey_pipeline_ops(num_ops: i64) -> i64 {
+    let mut checksum: i64 = i64_const(0);
+    let mut slot0: i64 = i64_const(0);
+    let mut slot1: i64 = i64_const(0);
+    let mut slot2: i64 = i64_const(0);
+    let mut slot3: i64 = i64_const(0);
+
+    let mut op: i64 = i64_const(0);
+    while op < num_ops {
+        let key = ((op * i64_const(2654435761)) / i64_const(65536)) % i64_const(4);
+
+        if op % i64_const(3) == i64_const(0) {
+            if key == i64_const(0) { slot0 = op; }
+            if key == i64_const(1) { slot1 = op; }
+            if key == i64_const(2) { slot2 = op; }
+            if key == i64_const(3) { slot3 = op; }
+        }
+        if op % i64_const(3) == i64_const(1) {
+            let mut val: i64 = i64_const(0);
+            if key == i64_const(0) { val = slot0; }
+            if key == i64_const(1) { val = slot1; }
+            if key == i64_const(2) { val = slot2; }
+            if key == i64_const(3) { val = slot3; }
+            checksum = checksum + val;
+        }
+        if op % i64_const(3) == i64_const(2) {
+            if key == i64_const(0) { slot0 = slot0 + i64_const(1); checksum = checksum + slot0; }
+            if key == i64_const(1) { slot1 = slot1 + i64_const(1); checksum = checksum + slot1; }
+            if key == i64_const(2) { slot2 = slot2 + i64_const(1); checksum = checksum + slot2; }
+            if key == i64_const(3) { slot3 = slot3 + i64_const(1); checksum = checksum + slot3; }
+        }
+        op = op + i64_const(1);
+    }
+    return checksum % i64_const(1000000007);
+}
+
+fn main() -> i32 {
+    let result = valkey_pipeline_ops(i64_const(100000));
+    print_int(result);
+    return 0;
+}

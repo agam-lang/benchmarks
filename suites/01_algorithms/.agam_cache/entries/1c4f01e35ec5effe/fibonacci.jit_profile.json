@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "backend": "jit",
-  "runs": 4,
-  "total_calls": 488,
-  "total_hits": 225,
-  "total_stores": 124,
+  "runs": 8,
+  "total_calls": 976,
+  "total_hits": 449,
+  "total_stores": 248,
   "functions": [
     {
       "name": "arg_or",
-      "runs": 4,
-      "total_calls": 4,
+      "runs": 8,
+      "total_calls": 8,
       "total_hits": 0,
       "total_stores": 0,
       "last_entries": 0,
@@ -27,10 +27,10 @@
     },
     {
       "name": "fib",
-      "runs": 4,
-      "total_calls": 484,
-      "total_hits": 225,
-      "total_stores": 124,
+      "runs": 8,
+      "total_calls": 968,
+      "total_hits": 449,
+      "total_stores": 248,
       "last_entries": 31,
       "profile": {
         "unique_keys": 33,
@@ -46,7 +46,7 @@
     },
     {
       "name": "i64_const",
-      "runs": 4,
+      "runs": 8,
       "total_calls": 0,
       "total_hits": 0,
       "total_stores": 0,

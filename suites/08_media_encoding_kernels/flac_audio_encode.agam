@@ -1,0 +1,28 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn lpc_residual_encode(num_samples: i64, order: i64) -> i64 {
+    let mut residual_energy: i64 = i64_const(0);
+    let mut i: i64 = order;
+    while i < num_samples {
+        let sample: i64 = ((i * i64_const(1103515245) + i64_const(12345)) % i64_const(32768)) - i64_const(16384);
+        let mut predicted: i64 = i64_const(0);
+        let mut k: i64 = i64_const(0);
+        while k < order {
+            let prev_sample: i64 = (((i - i64_const(1) - k) * i64_const(1103515245) + i64_const(12345)) % i64_const(32768)) - i64_const(16384);
+            predicted = predicted + prev_sample / (k + i64_const(2));
+            k = k + i64_const(1);
+        }
+        let diff = sample - predicted;
+        residual_energy = residual_energy + (if diff >= i64_const(0) { diff } else { -diff });
+        i = i + i64_const(1);
+    }
+    return residual_energy;
+}
+
+fn main() -> i32 {
+    let energy = lpc_residual_encode(i64_const(32768), i64_const(8));
+    print_int(energy);
+    return 0;
+}

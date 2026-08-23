@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "66044f835457378b",
+  "key": {
+    "source_hash": "e888d8d0448d2c8a",
+    "semantic_hash": "579b0f5992df22ec",
+    "backend": "Llvm",
+    "opt_level": 3,
+    "runtime_abi": 1,
+    "host_os": "windows",
+    "host_arch": "x86_64",
+    "host_pointer_width": 64,
+    "feature_signature": "build_cache=compiler-build-v2;strategy=auto-v1;disable_all=false;enable_all=true;optimize_all=false;include=;optimize=;exclude=;llvm_toolchain=missing;llvm_wsl_allowed=false;llvm_clang=clang;llvm_target=host;llvm_sysroot=none;llvm_sdkroot=none"
+  },
+  "artifact_kind": "LlvmIr",
+  "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\08_media_encoding_kernels\\motion_estimation.agam",
+  "artifact_name": "agam_llvm_o3_call_cache_on.ll",
+  "bytes": 60479,
+  "created_unix_ms": 1787484241135,
+  "last_used_unix_ms": 1787484241135
+}

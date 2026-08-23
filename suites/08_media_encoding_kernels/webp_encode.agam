@@ -1,0 +1,42 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn predict_spatial_residual(width: i64, height: i64, quality: i64) -> i64 {
+    let mut total_residual: i64 = i64_const(0);
+    let mut y: i64 = i64_const(1);
+    while y < height {
+        let mut x: i64 = i64_const(1);
+        while x < width {
+            let curr: i64 = ((y * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let top: i64 = (((y - i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let left: i64 = ((y * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let top_left: i64 = (((y - i64_const(1)) * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+
+            let p: i64 = left + top - top_left;
+            let pa: i64 = if p > left { p - left } else { left - p };
+            let pb: i64 = if p > top { p - top } else { top - p };
+            let pc: i64 = if p > top_left { p - top_left } else { top_left - p };
+
+            let pred: i64 = if pa <= pb && pa <= pc {
+                left
+            } else if pb <= pc {
+                top
+            } else {
+                top_left
+            };
+
+            let residual: i64 = (curr - pred) * quality / i64_const(100);
+            total_residual = total_residual + (if residual >= i64_const(0) { residual } else { -residual });
+            x = x + i64_const(1);
+        }
+        y = y + i64_const(1);
+    }
+    return total_residual;
+}
+
+fn main() -> i32 {
+    let res = predict_spatial_residual(i64_const(256), i64_const(256), i64_const(100));
+    print_int(res);
+    return 0;
+}

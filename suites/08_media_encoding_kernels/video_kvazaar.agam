@@ -1,0 +1,49 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn intra_mode_decision(block_size: i64) -> i64 {
+    let mut best_cost: i64 = i64_const(10000000);
+    let mut mode: i64 = i64_const(0);
+
+    // 35 HEVC Intra Prediction Angular Modes
+    while mode < i64_const(35) {
+        let mut sad_cost: i64 = i64_const(0);
+        let mut y: i64 = i64_const(0);
+        while y < block_size {
+            let mut x: i64 = i64_const(0);
+            while x < block_size {
+                let actual = ((y * block_size + x) * i64_const(1664525) + i64_const(1013904223)) % i64_const(256);
+                let predicted = if mode == i64_const(0) {
+                    (x + y) * i64_const(8)
+                } else if mode == i64_const(1) {
+                    i64_const(128)
+                } else {
+                    ((x * mode) + (y * (i64_const(35) - mode))) % i64_const(256)
+                };
+
+                let diff = actual - predicted;
+                sad_cost = sad_cost + (if diff >= i64_const(0) { diff } else { -diff });
+                x = x + i64_const(1);
+            }
+            y = y + i64_const(1);
+        }
+
+        if sad_cost < best_cost {
+            best_cost = sad_cost;
+        }
+        mode = mode + i64_const(1);
+    }
+    return best_cost;
+}
+
+fn main() -> i32 {
+    let mut total_cost: i64 = i64_const(0);
+    let mut iter: i64 = i64_const(0);
+    while iter < i64_const(1000) {
+        total_cost = total_cost + intra_mode_decision(i64_const(16));
+        iter = iter + i64_const(1);
+    }
+    print_int(total_cost);
+    return 0;
+}

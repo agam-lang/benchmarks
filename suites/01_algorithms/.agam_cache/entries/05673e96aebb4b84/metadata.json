@@ -16,6 +16,6 @@
   "source_path": "C:\\Users\\ksvik\\Projects\\Agam-Lang\\benchmarks\\suites\\01_algorithms\\quicksort.agam",
   "artifact_name": "quicksort.jit_profile.json",
   "bytes": 1666,
-  "created_unix_ms": 1787481634640,
-  "last_used_unix_ms": 1787481634640
+  "created_unix_ms": 1787484154513,
+  "last_used_unix_ms": 1787484154513
 }

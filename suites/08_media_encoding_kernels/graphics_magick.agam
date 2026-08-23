@@ -1,0 +1,33 @@
+@lang.advance
+
+fn i64_const(value: i64) -> i64 { return value; }
+
+fn graphics_magick_pipeline(width: i64, height: i64) -> i64 {
+    let mut accumulator: i64 = i64_const(0);
+    let mut y: i64 = i64_const(1);
+    while y < height - i64_const(1) {
+        let mut x: i64 = i64_const(1);
+        while x < width - i64_const(1) {
+            let center: i64 = ((y * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let top: i64 = (((y - i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let bottom: i64 = (((y + i64_const(1)) * width + x) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let left: i64 = ((y * width + (x - i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+            let right: i64 = ((y * width + (x + i64_const(1))) * i64_const(1103515245) + i64_const(12345)) % i64_const(256);
+
+            let sharpened = center * i64_const(5) - top - bottom - left - right;
+            let noise = ((x * i64_const(13) + y * i64_const(37)) % i64_const(31)) - i64_const(15);
+            let filtered = (sharpened + noise) % i64_const(256);
+
+            accumulator = accumulator + (if filtered >= i64_const(0) { filtered } else { -filtered });
+            x = x + i64_const(1);
+        }
+        y = y + i64_const(1);
+    }
+    return accumulator;
+}
+
+fn main() -> i32 {
+    let result = graphics_magick_pipeline(i64_const(256), i64_const(256));
+    print_int(result);
+    return 0;
+}
