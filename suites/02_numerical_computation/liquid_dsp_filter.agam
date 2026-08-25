@@ -1,31 +1,25 @@
 @lang.advance
 
-fn i64_const(value: i64) -> i64 { return value; }
-
-fn fir_filter_block(buffer_len: i64, filter_len: i64, passes: i64) -> i64 {
-    let mut energy_sum: i64 = i64_const(0);
-    let mut p: i64 = i64_const(0);
-    while p < passes {
-        let mut i: i64 = filter_len;
-        while i < buffer_len {
-            let mut acc: i64 = i64_const(0);
-            let mut k: i64 = i64_const(0);
-            while k < filter_len {
-                let input_val: i64 = ((i - k) % i64_const(17)) + i64_const(1);
-                let coeff_val: i64 = (k % i64_const(7)) + i64_const(1);
-                acc = acc + input_val * coeff_val;
-                k = k + i64_const(1);
-            }
-            energy_sum = (energy_sum + acc * acc) % i64_const(1000000007);
-            i = i + i64_const(1);
+fn liquid_dsp_fir(num_samples: i64, taps: i64) -> i64 {
+    let mut accumulator: i64 = 0;
+    let mut i: i64 = taps;
+    while i < num_samples {
+        let mut sample_acc: i64 = 0;
+        let mut k: i64 = 0;
+        while k < taps {
+            let input_val: i64 = ((i - k) * 37) % 1000;
+            let coeff: i64 = (k * 13) % 256;
+            sample_acc = sample_acc + input_val * coeff;
+            k = k + 1;
         }
-        p = p + i64_const(1);
+        accumulator = (accumulator + sample_acc) % 1000000007;
+        i = i + 1;
     }
-    return energy_sum;
+    return accumulator;
 }
 
 fn main() -> i32 {
-    let energy = fir_filter_block(i64_const(256), i64_const(32), i64_const(2000));
-    print_int(energy);
+    let res: i64 = liquid_dsp_fir(50000, 32);
+    print_int(res);
     return 0;
 }

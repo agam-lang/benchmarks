@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Matrix Multiplication (4096 flops)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": 1.29,
+    "gcc": 0.7,
+    "rust": 0.87,
+    "python": 48.8
+  },
+  {
+    "name": "Dot Product (100k vectors)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Prime Sieve (Eratosthenes)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Quicksort (100k partition)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Binary Search (200k Lookups)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Recursive Fibonacci (N=32)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Image Gaussian Blur (256x256)",
+    "agam_aot_base": null,
+    "agam_aot_adv": null,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": null,
+    "gcc": null,
+    "rust": null,
+    "python": null
+  },
+  {
+    "name": "Liquid-DSP FIR Filter (32-tap)",
+    "agam_aot_base": 3.61,
+    "agam_aot_adv": 3.68,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": 3.8,
+    "gcc": 2.91,
+    "rust": 6.87,
+    "python": 471.49
+  },
+  {
+    "name": "GraphicsMagick HWB/Sharpen",
+    "agam_aot_base": 25.26,
+    "agam_aot_adv": 24.7,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": 2.31,
+    "gcc": 2.22,
+    "rust": 1.56,
+    "python": 92.86
+  },
+  {
+    "name": "Kvazaar HEVC Intra-Pred (35 Modes)",
+    "agam_aot_base": 0.92,
+    "agam_aot_adv": 0.91,
+    "agam_jit_base": null,
+    "agam_jit_adv": null,
+    "clang": 1.37,
+    "gcc": 1.34,
+    "rust": 0.97,
+    "python": 33.58
+  }
+]

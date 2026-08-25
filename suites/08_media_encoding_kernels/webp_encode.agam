@@ -1,25 +1,33 @@
 @lang.advance
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Real-World WebP (libwebp VP8) Intra-Prediction & Residual Predictor Kernel
+// Algorithm:
+//   1. Canonical VP8 Paeth / TrueMotion Intra Predictor (src/dsp/dec.c)
+//   2. 4x4 Block Spatial Differential Error Calculation
+//   3. Fixed-Point Spatial Frequency Energy Accumulator
+// ─────────────────────────────────────────────────────────────────────────────
+
 fn i64_const(value: i64) -> i64 {
     return value;
 }
 
-fn paeth_predictor(a: i64, b: i64, c: i64) -> i64 {
-    let p: i64 = a + b - c;
-    let mut pa: i64 = p - a;
+fn paeth_predictor(left: i64, top: i64, top_left: i64) -> i64 {
+    let p: i64 = left + top - top_left;
+    let mut pa: i64 = p - left;
     if pa < i64_const(0) { pa = i64_const(0) - pa; }
-    let mut pb: i64 = p - b;
+    let mut pb: i64 = p - top;
     if pb < i64_const(0) { pb = i64_const(0) - pb; }
-    let mut pc: i64 = p - c;
+    let mut pc: i64 = p - top_left;
     if pc < i64_const(0) { pc = i64_const(0) - pc; }
 
     if pa <= pb && pa <= pc {
-        return a;
+        return left;
     }
     if pb <= pc {
-        return b;
+        return top;
     }
-    return c;
+    return top_left;
 }
 
 fn webp_encode(width: i64, height: i64) -> i64 {

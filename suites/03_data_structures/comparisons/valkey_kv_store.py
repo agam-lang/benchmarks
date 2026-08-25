@@ -1,29 +1,30 @@
-def valkey_pipeline_ops(num_ops):
-    table_size = 1024
-    table_keys = [0] * table_size
-    table_vals = [0] * table_size
-
+def valkey_pipeline_ops(num_ops: int) -> int:
     checksum = 0
-    for op in range(num_ops):
-        key = (op * 2654435761 // 65536)
-        slot = key % 1024
+    slot0 = slot1 = slot2 = slot3 = 0
 
-        mode = op % 3
-        if mode == 0:
-            table_keys[slot] = key
-            table_vals[slot] = op
-        elif mode == 1:
-            if table_keys[slot] == key:
-                checksum += table_vals[slot]
-        else:
-            table_vals[slot] += 1
-            checksum += table_vals[slot]
+    for op in range(num_ops):
+        key = int((op * 2654435761) / 65536) % 4
+
+        if op % 3 == 0:
+            if key == 0: slot0 = op
+            if key == 1: slot1 = op
+            if key == 2: slot2 = op
+            if key == 3: slot3 = op
+        if op % 3 == 1:
+            val = 0
+            if key == 0: val = slot0
+            if key == 1: val = slot1
+            if key == 2: val = slot2
+            if key == 3: val = slot3
+            checksum += val
+        if op % 3 == 2:
+            if key == 0: slot0 += 1; checksum += slot0
+            if key == 1: slot1 += 1; checksum += slot1
+            if key == 2: slot2 += 1; checksum += slot2
+            if key == 3: slot3 += 1; checksum += slot3
 
     return checksum % 1000000007
 
-def main():
-    result = valkey_pipeline_ops(100000)
-    print(result)
-
 if __name__ == "__main__":
-    main()
+    res = valkey_pipeline_ops(100000)
+    print(res)

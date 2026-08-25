@@ -1,41 +1,39 @@
-fn predict_spatial_residual(pixels: &[i32], width: usize, height: usize, quality: i32) -> i32 {
-    let mut total_residual: i32 = 0;
+fn paeth_predictor(left: i64, top: i64, top_left: i64) -> i64 {
+    let p = left + top - top_left;
+    let pa = (p - left).abs();
+    let pb = (p - top).abs();
+    let pc = (p - top_left).abs();
+
+    if pa <= pb && pa <= pc {
+        left
+    } else if pb <= pc {
+        top
+    } else {
+        top_left
+    }
+}
+
+fn webp_encode(width: i64, height: i64) -> i64 {
+    let mod_byte: i64 = 256;
+    let mod_prime: i64 = 1000000007;
+
+    let mut residual_sum: i64 = 0;
     for y in 1..height {
         for x in 1..width {
-            let curr = pixels[y * width + x];
-            let top = pixels[(y - 1) * width + x];
-            let left = pixels[y * width + (x - 1)];
-            let top_left = pixels[(y - 1) * width + (x - 1)];
+            let left = (((x - 1) * 17) + (y * 23)) % mod_byte;
+            let top = ((x * 17) + ((y - 1) * 23)) % mod_byte;
+            let top_left = (((x - 1) * 17) + ((y - 1) * 23)) % mod_byte;
+            let current = ((x * 17) + (y * 23)) % mod_byte;
 
-            let p = left + top - top_left;
-            let pa = (p - left).abs();
-            let pb = (p - top).abs();
-            let pc = (p - top_left).abs();
-
-            let pred = if pa <= pb && pa <= pc {
-                left
-            } else if pb <= pc {
-                top
-            } else {
-                top_left
-            };
-
-            let residual = (curr - pred) * quality / 100;
-            total_residual += residual.abs();
+            let predicted = paeth_predictor(left, top, top_left);
+            let diff = (current - predicted).abs();
+            residual_sum = (residual_sum + diff) % mod_prime;
         }
     }
-    total_residual
+    residual_sum
 }
 
 fn main() {
-    let width = 256;
-    let height = 256;
-    let mut pixels = Vec::with_capacity(width * height);
-    for i in 0..(width * height) {
-        let val = ((i.wrapping_mul(1103515245) + 12345) / 65536) % 256;
-        pixels.push(val as i32);
-    }
-
-    let res = predict_spatial_residual(&pixels, width, height, 100);
+    let res = webp_encode(512, 512);
     println!("{}", res);
 }

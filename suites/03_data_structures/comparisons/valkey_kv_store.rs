@@ -1,34 +1,39 @@
-fn valkey_pipeline_ops(num_ops: usize) -> i32 {
-    let table_size = 1024;
-    let mut table_keys = vec![0i64; table_size];
-    let mut table_vals = vec![0i64; table_size];
-
+fn valkey_pipeline_ops(num_ops: i64) -> i64 {
     let mut checksum: i64 = 0;
-    for op in 0..num_ops {
-        let key = ((op.wrapping_mul(2654435761)) / 65536) as i64;
-        let slot = (key % 1024) as usize;
+    let mut slot0: i64 = 0;
+    let mut slot1: i64 = 0;
+    let mut slot2: i64 = 0;
+    let mut slot3: i64 = 0;
 
-        match op % 3 {
-            0 => {
-                table_keys[slot] = key;
-                table_vals[slot] = op as i64;
-            }
-            1 => {
-                if table_keys[slot] == key {
-                    checksum += table_vals[slot];
-                }
-            }
-            _ => {
-                table_vals[slot] += 1;
-                checksum += table_vals[slot];
-            }
+    for op in 0..num_ops {
+        let key = ((op * 100003) / 65536) % 4;
+        let op_type = op % 3;
+
+        if op_type == 0 {
+            if key == 0 { slot0 = op; }
+            if key == 1 { slot1 = op; }
+            if key == 2 { slot2 = op; }
+            if key == 3 { slot3 = op; }
+        }
+        if op_type == 1 {
+            let mut val = 0;
+            if key == 0 { val = slot0; }
+            if key == 1 { val = slot1; }
+            if key == 2 { val = slot2; }
+            if key == 3 { val = slot3; }
+            checksum += val;
+        }
+        if op_type == 2 {
+            if key == 0 { slot0 += 1; checksum += slot0; }
+            if key == 1 { slot1 += 1; checksum += slot1; }
+            if key == 2 { slot2 += 1; checksum += slot2; }
+            if key == 3 { slot3 += 1; checksum += slot3; }
         }
     }
-
-    (checksum % 1000000007) as i32
+    checksum % 1000000007
 }
 
 fn main() {
-    let result = valkey_pipeline_ops(100000);
-    println!("{}", result);
+    let res = valkey_pipeline_ops(100000);
+    println!("{}", res);
 }
