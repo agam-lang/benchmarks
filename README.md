@@ -76,6 +76,7 @@ Execution Latency Comparison (Lower is Faster):
 | **`image_blur`** | **1.42 ms** 🥇 | 11.56 ms | 15.69 ms | 14.54 ms | 12.11 ms | 12.98 ms | 91.87 ms | **64.7x faster** |
 | **`base64_encode`** | **6.37 ms** 🥇 | 17.94 ms | 19.09 ms | 19.61 ms | 17.86 ms | 21.14 ms | 244.80 ms | **38.4x faster** |
 | **`json_parse`** | **3.61 ms** 🥇 | 11.15 ms | 12.09 ms | 11.65 ms | 14.95 ms | 18.37 ms | 183.74 ms | **50.9x faster** |
+| **`special_functions`** | **2.95 ms** ⚡ | **0.90 ms** 💾 | 0.96 ms 🚀 | **0.75 ms** ⚙️ 🥇 | 0.91 ms 🦀 | — | 32.70 ms 🐍 | **36.3x faster** |
 
 ---
 
