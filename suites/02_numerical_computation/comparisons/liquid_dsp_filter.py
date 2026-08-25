@@ -1,22 +1,14 @@
-def fir_filter_block(input_arr, coeffs, buffer_len, filter_len, passes):
-    energy_sum = 0.0
-    for _ in range(passes):
-        for i in range(filter_len, buffer_len):
-            acc = 0.0
-            for k in range(filter_len):
-                acc += input_arr[i - k] * coeffs[k]
-            energy_sum += acc * acc
-    return energy_sum
-
-def main():
-    buffer_len = 256
-    filter_len = 32
-
-    input_arr = [(i % 17) * 0.1 for i in range(buffer_len)]
-    coeffs = [(k % 7) * 0.05 for k in range(filter_len)]
-
-    energy = fir_filter_block(input_arr, coeffs, buffer_len, filter_len, 2000)
-    print(int(energy))
+def liquid_dsp_fir(num_samples: int, taps: int) -> int:
+    accumulator = 0
+    for i in range(taps, num_samples):
+        sample_acc = 0
+        for k in range(taps):
+            input_val = ((i - k) * 37) % 1000
+            coeff = (k * 13) % 256
+            sample_acc += input_val * coeff
+        accumulator = (accumulator + sample_acc) % 1000000007
+    return accumulator
 
 if __name__ == "__main__":
-    main()
+    res = liquid_dsp_fir(50000, 32)
+    print(res)

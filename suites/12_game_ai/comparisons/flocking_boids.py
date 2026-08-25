@@ -1,3 +1,7 @@
+def c_mod(a: int, m: int) -> int:
+    rem = abs(a) % m
+    return -rem if a < 0 else rem
+
 def flocking_boids(boids: int) -> int:
     checksum = 0
     frames = 30
@@ -35,15 +39,15 @@ def flocking_boids(boids: int) -> int:
             
             new_vx, new_vy = vx, vy
             if neighbors > 0:
-                align_x = (align_x // neighbors) - vx
-                align_y = (align_y // neighbors) - vy
-                coh_x = (coh_x // neighbors) - px
-                coh_y = (coh_y // neighbors) - py
+                align_x = int(align_x / neighbors) - vx
+                align_y = int(align_y / neighbors) - vy
+                coh_x = int(coh_x / neighbors) - px
+                coh_y = int(coh_y / neighbors) - py
                 
-                new_vx = vx + (sep_x * 5 + align_x * 2 + coh_x * 1) // 100
-                new_vy = vy + (sep_y * 5 + align_y * 2 + coh_y * 1) // 100
-            center_mass_sum = (center_mass_sum + new_vx + new_vy) % 1000000007
-        checksum = (checksum * 31 + center_mass_sum) % 1000000007
+                new_vx = vx + int((sep_x * 5 + align_x * 2 + coh_x * 1) / 100)
+                new_vy = vy + int((sep_y * 5 + align_y * 2 + coh_y * 1) / 100)
+            center_mass_sum = c_mod(center_mass_sum + new_vx + new_vy, 1000000007)
+        checksum = c_mod(checksum * 31 + center_mass_sum, 1000000007)
     return checksum
 
 if __name__ == "__main__":

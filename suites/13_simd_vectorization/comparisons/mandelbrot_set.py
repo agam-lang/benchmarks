@@ -9,8 +9,8 @@ def mandelbrot_set(size: int) -> int:
             
             x, y, iter_count = 0, 0, 0
             while x*x + y*y <= 4000000 and iter_count < max_iter:
-                xtemp = (x*x - y*y) // 1000 + x0
-                y = (2*x*y) // 1000 + y0
+                xtemp = int((x*x - y*y) / 1000) + x0
+                y = int((2*x*y) / 1000) + y0
                 x = xtemp
                 iter_count += 1
                 

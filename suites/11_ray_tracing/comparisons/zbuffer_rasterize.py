@@ -24,7 +24,7 @@ def zbuffer_rasterize(triangles: int) -> int:
                 is_inside = (w0 >= 0 and w1 >= 0 and w2 >= 0) or (w0 <= 0 and w1 <= 0 and w2 <= 0)
                 
                 if is_inside:
-                    z = (w0 * z0 + w1 * z1 + w2 * z2) // area
+                    z = int((w0 * z0 + w1 * z1 + w2 * z2) / area)
                     pixels_drawn += 1
                     checksum = (checksum * 31 + z + px + py) % 1000000007
         checksum = (checksum * 37 + pixels_drawn) % 1000000007

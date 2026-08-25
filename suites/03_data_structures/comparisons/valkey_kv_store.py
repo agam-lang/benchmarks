@@ -3,7 +3,7 @@ def valkey_pipeline_ops(num_ops: int) -> int:
     slot0 = slot1 = slot2 = slot3 = 0
 
     for op in range(num_ops):
-        key = int((op * 2654435761) / 65536) % 4
+        key = int((op * 100003) // 65536) % 4
 
         if op % 3 == 0:
             if key == 0: slot0 = op
