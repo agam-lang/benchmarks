@@ -20,6 +20,11 @@ results/raw/
 results/aggregated/
 results/reports/
 results/plots/
+results/output_*.csv
+.agam_cache/
+**/.agam_cache/
+*.pdb
+*.ll
 
 # IDE
 .idea/
